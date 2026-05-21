@@ -1497,4 +1497,214 @@ h3 {
     letter-spacing: 1px;
 }
 
+/* ==================================================
+   6. ATUALIZAÇÕES E ENRIQUECIMENTO DA PÁGINA DO AUTOR
+   ================================================== */
+.galeria-reticular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.cartao-galeria {
+    background: #ffffff;
+    border: 1px solid var(--cor-grade);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: var(--cor-destaque);
+}
+
+.cartao-galeria .moldura-foto-pequena {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--cor-grade);
+    aspect-ratio: 4 / 3;
+}
+
+.cartao-galeria .foto-galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(110%);
+    transition: all 0.5s ease;
+}
+
+.cartao-galeria:hover .foto-galeria {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.05);
+}
+
+.cartao-galeria h4 {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--cor-link);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.cartao-galeria p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+}
+
+/* Painel de Citações Interativo */
+.painel-citacoes-interativo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    background: #ffffff;
+    border: 1px solid var(--cor-grade);
+    border-radius: 8px;
+    padding: 3rem;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.painel-botoes-citacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-citacao-trigger {
+    background: rgba(44, 93, 99, 0.03);
+    border: 1px solid var(--cor-grade);
+    border-left: 4px solid var(--cor-grade);
+    color: var(--cor-texto);
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    font-family: monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-citacao-trigger:hover {
+    background: rgba(44, 93, 99, 0.08);
+    border-left-color: var(--cor-destaque);
+    transform: translateX(4px);
+}
+
+.btn-citacao-trigger.ativo {
+    background: var(--cor-destaque);
+    color: #ffffff;
+    border-color: var(--cor-destaque);
+    border-left-color: var(--cor-link);
+}
+
+.visor-citacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    border-left: 1px solid var(--cor-grade);
+    min-height: 250px;
+    position: relative;
+}
+
+.visor-citacao blockquote {
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--cor-destaque);
+    margin-bottom: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.visor-citacao .autor-citacao-stamp {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--cor-link);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Grid de Pilares com 5 colunas */
+.grid-pilares-novo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.pilar-card-novo {
+    background: #ffffff;
+    border: 1px solid var(--cor-grade);
+    padding: 2.5rem 2rem;
+    position: relative;
+    border-top: 4px solid var(--cor-destaque);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.pilar-card-novo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-top-color: var(--cor-link);
+    border-color: var(--cor-destaque);
+}
+
+.pilar-card-novo .pilar-numero {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: var(--cor-link);
+    color: white;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+}
+
+.pilar-card-novo h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--cor-destaque);
+}
+
+.pilar-card-novo p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+}
+
+/* Responsividade Geral */
+@media (max-width: 900px) {
+    .galeria-reticular {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .painel-citacoes-interativo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .visor-citacao {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--cor-grade);
+        padding-top: 2rem;
+        min-height: auto;
+    }
+    .visor-citacao blockquote {
+        font-size: 1.3rem;
+    }
+}
+
 

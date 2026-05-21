@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <path d="M12 16v-4"/>
                 <path d="M12 8h.01"/>
               </svg>
-              Provocação Epistemológica (Doutorado)
+              Provocação Epistemológica
             </h4>
             <p>${conceito.provocacao}</p>
           </div>
@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <path d="M12 16v-4"/>
                 <path d="M12 8h.01"/>
               </svg>
-              Tensionamento Epistemológico (Seminário de Doutorado)
+              Tensionamento Epistemológico
             </h4>
             <p>${cap.provocacao}</p>
           </div>
