@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chaves de Leitura - Professores: Libertar o Futuro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="pagina-interna">
+        <header class="cabecalho-interno">
+            <div class="logo-texto">
+                <a href="index.html">VOLTAR AO INÍCIO</a>
+            </div>
+            <nav>
+                <ul class="navegacao-reticular">
+                    <li><a href="autor.html">Autor</a></li>
+                    <li><a href="glossario.html">Glossário</a></li>
+                    <li><a href="dialogos.html">Diálogos</a></li>
+                    <li>
+                        <a href="chaves-leitura.html" class="ativo"
+                            >Chaves de Leitura</a
+                        >
+                    </li>
+                    <li><a href="rumos.html">Rumos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="conteudo-fluido">
+            <section class="territorio">
+                <h2>Chaves de Leitura</h2>
+                <p>
+                    A compreensão da obra exige o reconhecimento de que a forma
+                    escolar clássica se esgotou. A transição não ocorre por meio
+                    de reformas superficiais, mas de uma recriação profunda do
+                    fazer-junto.
+                </p>
+            </section>
+
+            <section id="metamorfose-espacial" class="territorio">
+                <div class="decoracao-arquitetonica">
+                    COORDENADAS // RUPTURA
+                </div>
+                <h2>A Metamorfose: Superando o Modelo do Século XIX</h2>
+
+                <div class="controles-metamorfose">
+                    <label for="slider-metamorfose">DESLIZE PARA TRANSFORMAR O ESPAÇO ESCOLAR</label>
+                    <input type="range" id="slider-metamorfose" min="0" max="100" value="0" class="slider-premium">
+                    <p id="legenda-transicao" class="legenda-transicao"></p>
+                </div>
+
+                <div class="palco-transicao">
+                    <div class="cenario obsoleto">
+                        <div class="grade-celular">
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                            <div class="celula"></div>
+                        </div>
+                        <p class="rotulo-cenario">
+                            O Século Escolar: Salas celulares e tempos rígidos.
+                        </p>
+                    </div>
+
+                    <div class="cenario futuro">
+                        <div class="ecologia-organica">
+                            <div class="forma azul-petroleo redonda"></div>
+                            <div class="forma terracota capsula"></div>
+                            <div class="forma creme conectora"></div>
+                            <div class="forma terracota redonda"></div>
+                        </div>
+                        <p class="rotulo-cenario">
+                            O Futuro Presente: Ambientes diversificados e
+                            colaborativos.
+                        </p>
+                    </div>
+            </section>
+
+            <!-- Seção do Guia de Leitura Avançado por Capítulos -->
+            <section id="guia-leitura" class="territorio">
+                <div class="decoracao-arquitetonica">05 // GUIA DE LEITURA POR CAPÍTULO</div>
+                <h2>Guia de Leitura Avançado</h2>
+                <p>
+                    Explore a síntese crítica, as citações exatas e os tensionamentos teóricos de cada um dos 10 capítulos da obra, estruturados especialmente para discussões de seminários de doutorado e fundamentação de teses.
+                </p>
+
+                <div class="painel-guia-leitura">
+                    <div class="seletor-capitulos" id="seletor-capitulos">
+                        <!-- Gerado dinamicamente via JS -->
+                    </div>
+                    <div class="painel-detalhe-capitulo" id="painel-detalhe-capitulo">
+                        <!-- Exibido dinamicamente via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

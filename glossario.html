@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Glossário - Professores: Libertar o Futuro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="pagina-interna">
+        <header class="cabecalho-interno">
+            <div class="logo-texto">
+                <a href="index.html">VOLTAR AO INÍCIO</a>
+            </div>
+            <nav>
+                <ul class="navegacao-reticular">
+                    <li><a href="autor.html">Autor</a></li>
+                    <li><a href="glossario.html" class="ativo">Glossário</a></li>
+                    <li><a href="dialogos.html">Diálogos</a></li>
+                    <li><a href="chaves-leitura.html">Chaves de Leitura</a></li>
+                    <li><a href="rumos.html">Rumos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="conteudo-fluido">
+            <section class="territorio">
+                <div class="decoracao-arquitetonica">02 // CARTOGRAFIA CONCEITUAL</div>
+                <h2>Glossário Temático</h2>
+                <p>
+                    Explore os conceitos centrais da metamorfose escolar sob a ótica de António Nóvoa. Selecione um termo na lista ou faça uma busca direta para revelar definições, trechos do livro e questionamentos voltados ao debate no doutorado.
+                </p>
+
+                <div class="painel-glossario">
+                    <div class="busca-container">
+                        <input type="text" id="busca-conceito" class="input-busca" placeholder="Buscar conceito ou palavra-chave (ex: Comum, Colegialidade, Celular)...">
+                    </div>
+
+                    <div class="grid-botoes-conceitos" id="grid-conceitos">
+                        <!-- Gerado dinamicamente via JS -->
+                    </div>
+
+                    <div class="cartao-detalhe-conceito" id="cartao-detalhe">
+                        <!-- Detalhes do conceito exibidos dinamicamente -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
