@@ -1707,4 +1707,39 @@ h3 {
     }
 }
 
+/* ==================================================
+   LINK DE AUTODECLARAÇÃO DE USO DE IA (HOME)
+   ================================================== */
+.ia-declaracao-container {
+    z-index: 5;
+}
+
+.link-ia-declaracao {
+    color: var(--azul-blueprint-claro);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.link-ia-declaracao:hover {
+    color: #ffffff;
+    border-color: var(--cor-link);
+    background: rgba(180, 90, 61, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(180, 90, 61, 0.1);
+}
+
+.icone-ia {
+    font-size: 1rem;
+}
+
 
