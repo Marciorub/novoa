@@ -1036,4 +1036,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial render
     renderizarDicas();
   }
+
+  // ==================================================
+  // 8. NAVEGAÇÃO DE ABAS (TABS) PARA RUMOS.HTML
+  // ==================================================
+  const abasRumos = document.querySelectorAll(".aba-rumos");
+  const paineisAba = document.querySelectorAll(".painel-aba");
+
+  if (abasRumos.length > 0 && paineisAba.length > 0) {
+    abasRumos.forEach(aba => {
+      aba.addEventListener("click", () => {
+        // Remover classe ativa de todas as abas
+        abasRumos.forEach(a => a.classList.remove("ativa"));
+        // Adicionar classe ativa na aba clicada
+        aba.classList.add("ativa");
+
+        // Ocultar todos os painéis
+        paineisAba.forEach(painel => {
+          painel.classList.remove("ativo");
+        });
+
+        // Exibir o painel correspondente
+        const abaAlvo = aba.getAttribute("data-aba");
+        const painelAlvo = document.getElementById(`conteudo-${abaAlvo}`);
+        if (painelAlvo) {
+          painelAlvo.classList.add("ativo");
+        }
+      });
+    });
+  }
 });

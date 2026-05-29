@@ -1957,4 +1957,108 @@ h3 {
     }
 }
 
+/* ==================================================
+   ABAS DE NAVEGAÇÃO INTERNA (TABS) - RUMOS.HTML
+   ================================================== */
+.navegacao-abas-rumos {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0 3.5rem 0;
+    border-bottom: 2px dashed var(--cor-grade);
+    padding-bottom: 1.2rem;
+    position: relative;
+}
 
+.aba-rumos {
+    background: none;
+    border: 1px solid transparent;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: none;
+}
+
+.aba-rumos .numero-aba {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: var(--cor-link);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.aba-rumos::before {
+    content: "";
+    position: absolute;
+    bottom: -1.3rem;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+.aba-rumos.ativa {
+    color: var(--cor-destaque);
+    background-color: rgba(44, 93, 99, 0.06);
+    border: 1px solid rgba(44, 93, 99, 0.15);
+}
+
+.aba-rumos.ativa .numero-aba {
+    opacity: 1;
+}
+
+.aba-rumos.ativa::before {
+    background-color: var(--cor-destaque);
+}
+
+.aba-rumos:hover:not(.ativa) {
+    color: var(--cor-link);
+    background-color: rgba(180, 90, 61, 0.04);
+    border: 1px dashed rgba(180, 90, 61, 0.25);
+}
+
+/* Painel de Abas */
+.painel-aba {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.painel-aba.ativo {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .navegacao-abas-rumos {
+        flex-direction: column;
+        gap: 0.8rem;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .aba-rumos {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1.2rem;
+        border: 1px solid var(--cor-grade);
+    }
+    .aba-rumos::before {
+        display: none;
+    }
+    .aba-rumos.ativa {
+        border-color: var(--cor-destaque);
+    }
+}
