@@ -33,7 +33,7 @@
                 <div class="decoracao-arquitetonica">04 // DIAGNÓSTICO E PROPOSIÇÃO</div>
                 <h2>Rumos e Autodiagnóstico Escolar</h2>
                 <p>
-                    Como se situa a escola em que você atua ou analisa em relação aos eixos de metamorfose propostos por António Nóvoa? Ajuste os controles deslizantes abaixo (de 0 a 10) para rodar o cálculo reflexivo da transformação escolar.
+                    Em qual momento de transformação se encontra a sua escola, tendo como lente os eixos de metamorfose de António Nóvoa? Ajuste os controles para expressar como você percebe a presença dessas dimensões no dia a dia. A proposta aqui não é quantificar ou medir, mas criar um retrato qualitativo que sirva como ponto de partida para o diálogo e a reflexão.
                 </p>
 
                 <div class="painel-rumos">
@@ -45,7 +45,7 @@
                                 <p>Superação da sala de aula celular tradicional e flexibilização dos blocos horários rígidos para projetos comuns.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-espaco-tempo">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
 
                         <!-- Eixo 2 -->
@@ -55,7 +55,7 @@
                                 <p>Existência de práticas de planejamento compartilhado, observação de aulas e docência em parceria no dia a dia.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-colegialidade">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
 
                         <!-- Eixo 3 -->
@@ -65,7 +65,7 @@
                                 <p>Políticas de inclusão incondicional, acolhimento integral das diferenças e proteção da esfera democrática.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-lugar-comum">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
 
                         <!-- Eixo 4 -->
@@ -75,7 +75,7 @@
                                 <p>Estudantes participantes ativos nas decisões da escola, assembleias atuantes e percursos de projetos autorais.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-autonomia">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
 
                         <!-- Eixo 5 -->
@@ -85,7 +85,7 @@
                                 <p>Escrita pública de práticas e protagonismo docente na elaboração e adaptação de currículos fora de apostilas de mercado.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-criacao">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
 
                         <!-- Eixo 6 -->
@@ -95,20 +95,47 @@
                                 <p>Governança híbrida e colegiada unindo a universidade, escolas básicas e redes de ensino para indução e formação continuada.</p>
                             </div>
                             <input type="range" min="0" max="10" value="5" id="slider-universidade">
-                            <div class="valor-slider">5</div>
+                            <div class="valor-slider">Experimentação</div>
                         </div>
                     </div>
 
                     <!-- Bloco de Feedback Dinâmico -->
                     <div class="bloco-resultado-diagnostico">
                         <div class="radial-media">
-                            <span class="numero-grande">5.0</span>
+                            <span class="numero-grande" style="font-size: 1.05rem;">Transição</span>
                         </div>
                         <div class="diagnostico-feedback">
                             <h3>Escola em Transição</h3>
                             <p>Carregando diagnóstico conceitual...</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- Seção de Dicas Práticas para a Ação Docente -->
+            <section class="territorio sem-borda" id="secao-dicas" style="padding-top: 2rem;">
+                <div class="decoracao-arquitetonica">05 // PRÁTICA DOCENTE</div>
+                <h2>Diretrizes Práticas para o Cotidiano Docente</h2>
+                <p style="margin-top: -1rem; margin-bottom: 2.5rem;">
+                    Mapeamos 12 diretrizes operacionais baseadas diretamente na obra de António Nóvoa para subsidiar a reflexão e ação pedagógica. Utilize os filtros abaixo para focar na área de interesse e explore os recursos e trechos literários integrados.
+                </p>
+
+                <!-- Filtros por Categoria -->
+                <div class="filtros-dicas-bar">
+                    <span class="rotulo-filtro">Filtrar por Área:</span>
+                    <div class="botoes-filtros-dicas" id="filtros-dicas-container">
+                        <button class="btn-filtro-dica ativo" data-categoria="todas">Todas (12)</button>
+                        <button class="btn-filtro-dica" data-categoria="Pedagogia">Pedagogia</button>
+                        <button class="btn-filtro-dica" data-categoria="Identidade profissional">Identidade</button>
+                        <button class="btn-filtro-dica" data-categoria="Escola & ambiente">Escola & Ambiente</button>
+                        <button class="btn-filtro-dica" data-categoria="Formação docente">Formação Docente</button>
+                        <button class="btn-filtro-dica" data-categoria="Política educacional">Política</button>
+                    </div>
+                </div>
+
+                <!-- Grid de Dicas -->
+                <div class="grid-dicas-novo" id="grid-dicas-container">
+                    <!-- Gerado dinamicamente via JS em script.js -->
                 </div>
             </section>
         </main>

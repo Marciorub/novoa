@@ -405,19 +405,31 @@ document.addEventListener("DOMContentLoaded", () => {
         const itemSlider = slider.closest(".item-slider");
         if (itemSlider) {
           const displayValor = itemSlider.querySelector(".valor-slider");
-          if (displayValor) displayValor.innerText = val.toString();
+          if (displayValor) {
+            let estagioIndividual = "Experimentação";
+            if (val <= 3) estagioIndividual = "Sensibilização";
+            else if (val >= 8) estagioIndividual = "Consolidação";
+            displayValor.innerText = estagioIndividual;
+          }
         }
       });
 
       const media = Math.round((soma / sliders.length) * 10) / 10;
       
-      if (mediaDisplay) {
-        mediaDisplay.innerText = media.toFixed(1);
+      let estagioGlobal = "Transição";
+      let diagnosticoIndex = 1;
+      if (media < 4.0) {
+        estagioGlobal = "Inicial";
+        diagnosticoIndex = 0;
+      } else if (media >= 8.0) {
+        estagioGlobal = "Consolidada";
+        diagnosticoIndex = 2;
       }
-
-      let diagnosticoIndex = 0;
-      if (media >= 5.0 && media <= 7.9) diagnosticoIndex = 1;
-      else if (media >= 8.0) diagnosticoIndex = 2;
+      
+      if (mediaDisplay) {
+        mediaDisplay.innerText = estagioGlobal;
+        mediaDisplay.style.fontSize = "1.05rem";
+      }
 
       if (diagnosticoTitulo && diagnosticoTexto) {
         diagnosticoTitulo.innerText = retornosDiagnostico[diagnosticoIndex].titulo;
@@ -630,5 +642,398 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     renderizarCapitulos();
+  }
+
+  // ==================================================
+  // 7. DIRETRIZES PRÁTICAS PARA O COTIDIANO DOCENTE (RUMOS.HTML)
+  // ==================================================
+  const gridDicasContainer = document.getElementById("grid-dicas-container");
+  const filtrosDicasContainer = document.getElementById("filtros-dicas-container");
+
+  if (gridDicasContainer && filtrosDicasContainer) {
+    const dicas = [
+      {
+        id: 1,
+        numero: "Dica 01",
+        paginas: "p. 15–17",
+        categoria: "Pedagogia",
+        titulo: "Adote pedagogias cooperativas: o aprendizado é sempre com o outro",
+        descricao: "Nóvoa defende que a educação não é um ato individual — ninguém se educa sozinho. O professor deve organizar sua sala para o trabalho em comum, por meio de projetos colaborativos, temas transversais e aprendizagem em grupo.",
+        quote: "Aprender juntos implica ligar o conhecimento à solidariedade, à ética e à empatia.",
+        tabs: [
+          {
+            rotulo: "Ver exemplos práticos",
+            conteudo: `<strong>Estratégias de Cooperação em Sala:</strong><ul><li><strong>Aprendizagem por Projetos:</strong> Os estudantes trabalham juntos para resolver problemas da vida real ou de pesquisa.</li><li><strong>Seminários em Grupo:</strong> Debates horizontais baseados na leitura prévia compartilhada e tensionamento de ideias.</li><li><strong>Peer Teaching (Tutoria de Pares):</strong> Espaço de co-aprendizado onde alunos explicam conceitos uns aos outros.</li><li><strong>Sala de Aula Invertida Coletiva:</strong> O estudo autônomo individual é consolidado em oficinas dinâmicas presenciais.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"A educação é um percurso pessoal de apropriação do conhecimento, mas que se dá no encontro com os outros, sobretudo com os diferentes de nós... nada substitui as dinâmicas de cooperação e de colaboração na pedagogia e na escola."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 15)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Lev Vygotsky:</strong> O conceito de Mediação Social e Zona de Desenvolvimento Proximal (ZDP).</li><li><strong>Richard Sennett:</strong> <em>Together: The Rituals, Pleasures and Politics of Cooperation</em> (2012).</li><li><strong>Relatório UNESCO (2021):</strong> <em>Reimaginar nossos futuros juntos: um novo contrato social para a educação</em>.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 2,
+        numero: "Dica 02",
+        paginas: "p. 26",
+        categoria: "Identidade profissional",
+        titulo: "Ensine a disciplina como meio, não como fim: a Matemática forma o humano",
+        descricao: "O autor provoca: a missão de um professor de Matemática não é ensinar Matemática — é formar um aluno por meio da Matemática. Cada aula deve ter consciência de que o conteúdo é o veículo; o destino é o desenvolvimento humano do estudante.",
+        quote: "A nossa palavra como educadores será inútil se não for capaz de despertar a palavra própria do educando.",
+        tabs: [
+          {
+            rotulo: "Aplicar na minha aula",
+            conteudo: `<strong>Foco na Formação Humana:</strong><br>Selecione uma disciplina para ver sua finalidade humana:<br><div style='margin-top:0.8rem; display:flex; flex-wrap:wrap; gap:0.4rem;'><button class='btn-dica-tab' onclick='this.closest(".dica-painel-conteudo").querySelector(".feedback-disciplina").innerHTML = "<strong>Matemática:</strong> Desenvolver o raciocínio lógico estruturado e a capacidade de resolução ética de problemas complexos.";'>Matemática</button><button class='btn-dica-tab' onclick='this.closest(".dica-painel-conteudo").querySelector(".feedback-disciplina").innerHTML = "<strong>História:</strong> Desenvolver a empatia histórica e a consciência crítica de agência social frente ao presente.";'>História</button><button class='btn-dica-tab' onclick='this.closest(".dica-painel-conteudo").querySelector(".feedback-disciplina").innerHTML = "<strong>Ciências:</strong> Praticar o método científico como atitude de questionamento crítico da realidade e de responsabilidade socioambiental.";'>Ciências</button></div><div class='feedback-disciplina' style='margin-top:1rem; font-style:italic; color:var(--cor-destaque); min-height:1.5rem;'>Escolha uma área acima para analisar o objetivo...</div>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Educar humanos. [...] a missão de um professor de Matemática não é ensinar Matemática, é formar um aluno por meio da Matemática. [...] A educação é um processo pessoal de apropriação do conhecimento, pelo qual nos tornamos mais preparados e capazes."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 26)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Mikhail Epstein:</strong> <em>The Transformative Humanities</em> (2012) - a humana docência.</li><li><strong>Paulo Freire:</strong> <em>Pedagogia do Oprimido</em> (diálogo e humanização).</li><li><strong>Martha Nussbaum:</strong> <em>Not for Profit: Why Democracy Needs the Humanities</em> (2010).</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 3,
+        numero: "Dica 03",
+        paginas: "p. 24–25",
+        categoria: "Escola & ambiente",
+        titulo: "Proteja a dimensão presencial: tecnologia não substitui o encontro humano",
+        descricao: "O livro alerta para o risco de uma educação exclusivamente virtual. Nóvoa é claro: não há educação sem afeto, sem sentimento, sem relação humana profunda. O professor deve valorizar o encontro presencial e usar o digital como complemento, nunca como substituto.",
+        quote: "Não se pode conhecer sem sentir, não se pode aprender sem emoção, sem empatia.",
+        tabs: [
+          {
+            rotulo: "Explorar o equilíbrio",
+            conteudo: `<strong>Equilíbrio Presencial-Digital:</strong><ul><li><strong>Presencial (Onde o Encontro Brilha):</strong> Debates, problematizações coletivas, dinâmicas de afeto, escuta ativa e mediação de conflitos.</li><li><strong>Digital (Como Ferramenta):</strong> Acesso a bases científicas, mapeamento visual, portfólios digitais e compartilhamento rápido de dados.</li><li><em>Nota:</em> O digital complementa a cultura; jamais substitui o encontro presencial do saber comum.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"As tecnologias fazem parte da nossa vida, do dia a dia das nossas crianças, mas a educação dá-se sempre num contexto de relação humana. [...] Não há educação sem afeto, não há educação sem sentimento, não há educação sem relação humana profunda."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 24)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Gert Biesta:</strong> <em>Good Education in an Age of Measurement</em> (2010).</li><li><strong>Michel Serres:</strong> <em>Polegarzinha</em> (2012) - a transição geracional-tecnológica.</li><li><strong>François Dubet:</strong> Reflexões sobre a superioridade ética da escola presencial física.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 4,
+        numero: "Dica 04",
+        paginas: "p. 46–48",
+        categoria: "Formação docente",
+        titulo: "Reduza a burocracia e libere tempo para o que importa: ensinar e refletir",
+        descricao: "O ponto 85 da Recomendação OIT/UNESCO de 1966, citado por Nóvoa, diz que o trabalho do professor é tão especial que deveria ser organizado de modo a evitar toda a perda de tempo e de energias. O professor deve ser agente na redução de tarefas inúteis em sua rotina.",
+        quote: "Precisamos limpar o dia a dia dos professores de tudo o que traz esgotamento e desmotivação.",
+        tabs: [
+          {
+            rotulo: "Otimizar minha rotina",
+            conteudo: `<strong>Checklist de Simplificação Docente (Marque para otimizar):</strong><ul><li><label><input type='checkbox' checked style='accent-color:var(--cor-destaque)'> Atas descritivas longas (Mudar para ata rápida em tópicos de decisão)</label></li><li><label><input type='checkbox' style='accent-color:var(--cor-destaque)'> Planejamento individual isolado (Compartilhar planejamentos no coletivo)</label></li><li><label><input type='checkbox' checked style='accent-color:var(--cor-destaque)'> Estudo e escrita científica do próprio fazer (Reservar tempo inviolável na rotina)</label></li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Nos últimos anos, a queixa mais ouvida dos professores é a burocracia, a imensidão de tarefas, tantas vezes inúteis, que infernizam o seu dia a dia. E têm razão. Precisamos limpar o dia a dia dos professores de tudo o que traz esgotamento e desmotivação."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 47)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Recomendação OIT/UNESCO (1966):</strong> Ponto 85 relativo ao estatuto dos professores.</li><li><strong>Andy Hargreaves:</strong> <em>Changing Teachers, Changing Times: Teachers' Work and Culture in the Postmodern Age</em> (1994).</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 5,
+        numero: "Dica 05",
+        paginas: "p. 49–50",
+        categoria: "Identidade profissional",
+        titulo: "Use sua autoridade para libertar o aluno, não para controlar",
+        descricao: "Nóvoa retoma Rousseau para mostrar que a autoridade do professor existe para instaurar uma realidade nova, para autorizar a autonomia daqueles que estão dando os primeiros passos. A sala de aula deve ser espaço de emancipação — autoridade a serviço da liberdade do estudante.",
+        quote: "É para isso que serve a liberdade dos professores: para despertar a liberdade dos alunos.",
+        tabs: [
+          {
+            rotulo: "Ver estratégias práticas",
+            conteudo: `<strong>Agência e Emancipação em Sala:</strong><ul><li><strong>Contratos de Convivência:</strong> Regras básicas cocriadas entre estudantes e professor.</li><li><strong>Avaliação Formativa:</strong> Diálogo reflexivo sobre erros como disparadores cognitivos, não punição.</li><li><strong>Autonomia Progressiva:</strong> Ampliação das decisões discentes sobre prazos e formatos de projetos pedagógicos.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"A autoridade existe para instaurar uma realidade nova, para autorizar a autonomia daqueles que estão dando os primeiros passos. [...] Os humanos não se educam sozinhos. Precisam de mestres e de colegas."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 49–50)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>George Steiner:</strong> <em>Lições dos Mestres</em> (2005) - citado diretamente por Nóvoa.</li><li><strong>Hannah Arendt:</strong> <em>Entre o Passado e o Futuro</em> (2001) - sobre autoridade e educação.</li><li><strong>Theodor Adorno:</strong> <em>Educação e Emancipação</em> (2020).</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 6,
+        numero: "Dica 06",
+        paginas: "p. 61–72",
+        categoria: "Formação docente",
+        titulo: "Valorize e sistematize seu conhecimento profissional docente",
+        descricao: "Um dos eixos centrais do livro: o professor possui um 'terceiro gênero de conhecimento' — contingente, coletivo e público — que não é apenas teórico nem apenas prático. O professor deve refletir sobre sua própria prática, registrar e partilhar esse saber.",
+        quote: "A formalização desse conhecimento é muito importante para o reconhecimento profissional e público dos professores.",
+        tabs: [
+          {
+            rotulo: "Como documentar",
+            conteudo: `<strong>Roteiro de Registro Docente:</strong><ul><li><strong>Diário Reflexivo:</strong> Breve nota semanal focando em: <em>(1) O planejado; (2) Os incidentes contingentes em sala; (3) As táticas docentes improvisadas.</em></li><li><strong>Portfólio de Evidências:</strong> Mapear os produtos dos alunos para documentar o avanço conceitual real.</li><li><strong>Relato de Pública Ação:</strong> Sistematização de uma boa prática para partilha em redes de professores.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"O conhecimento profissional docente tem características próprias, é um 'terceiro gênero de conhecimento'. [...] Não é um conhecimento facilmente reconhecível, pois escapa aos parâmetros habituais. Precisamos adotar novos pontos de vista a fim de conseguirmos captar a sua natureza e sentido."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 67)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Donald Schön:</strong> <em>The Reflective Practitioner</em> (1983) - a epistemologia da prática.</li><li><strong>John Dewey:</strong> <em>The Sources of a Science of Education</em> (1929) - saber experiencial.</li><li><strong>Gilles Ferry:</strong> <em>Le trajet de la formation</em> (1983) - o trabalho contínuo sobre si.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 7,
+        numero: "Dica 07",
+        paginas: "p. 70–72",
+        categoria: "Formação docente",
+        titulo: "Escreva e publique: a voz pública do professor é parte da profissão",
+        descricao: "Nóvoa insiste que uma profissão que não se escreve não se inscreve no ponto de vista social. Escrever artigos, relatos de experiência, textos para blogs educacionais ou redes de professores é um ato profissional. Publicar é uma forma de pública ação.",
+        quote: "É preciso que os professores tenham a possibilidade e a coragem de escrever e de publicar.",
+        tabs: [
+          {
+            rotulo: "Primeiros passos",
+            conteudo: `<strong>Roteiro de Textos Docentes:</strong><ol><li><strong>Escolher:</strong> Foque em um projeto prático singular ou um incidente resolvido com a turma.</li><li><strong>Estruturar:</strong> Descreva em: Contexto ➔ Prática Pedagógica ➔ Tensionamentos ➔ Aprendizados.</li><li><strong>Legitimidade:</strong> Rompa o retraimento corporativo em relação à escrita acadêmica.</li></ol>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Os professores têm um certo retraimento em relação à escrita, como se esse exercício lhes estivesse vedado e pertencesse apenas à esfera acadêmica. [...] O conhecimento profissional docente ganha legitimidade e relevância quando se difunde na sociedade."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 71-72)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Simone Weil:</strong> Citada por Nóvoa sobre a reflexão escrita e o papel público do sujeito.</li><li><strong>Relatório UNESCO (2021):</strong> O professor no centro das esferas públicas deliberativas.</li><li><strong>Revistas sugeridas:</strong> <em>Cadernos de Pesquisa</em> (FCC), <em>Revista Brasileira de Educação</em> (ANPEd).</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 8,
+        numero: "Dica 08",
+        paginas: "p. 81–84",
+        categoria: "Formação docente",
+        titulo: "Cuide e acolhe os professores iniciantes: a indução é decisiva",
+        descricao: "O capítulo 7 dedica-se inteiro ao tema: os primeiros anos de docência são os mais formativos. Professores experientes têm responsabilidade de acolher os jovens colegas. Criar grupos de mentoria e acompanhamento nos primeiros semestres fortalece a profissão.",
+        quote: "A profissão docente não terá futuro se não cuidar melhor dos seus professores mais jovens.",
+        tabs: [
+          {
+            rotulo: "Estruturar mentoria",
+            conteudo: `<strong>Passos para um Programa de Indução:</strong><ul><li><strong>Co-docência:</strong> Planejamento e docência compartilhados no primeiro semestre entre novato e experiente.</li><li><strong>Grupos de Mentoria Horizontal:</strong> Encontros quinzenais para discutir gestão de sala, relações com alunos e cansaço mental.</li><li><strong>Proteção Institucional:</strong> Garantir que o professor iniciante receba turmas e horários equilibrados.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Adquiri a consciência clara de que os primeiros anos como professores iniciantes ou principiantes são os mais decisivos na vida profissional docente, pois marcam, de muitas maneiras, a nossa relação com os alunos, com os colegas e com a profissão. É no acolhimento coletivo que o jovem professor constrói a segurança."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 81)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Michael Huberman:</strong> <em>A Vida dos Professores</em> (1989) -  ciclos de vida da docência.</li><li><strong>Ken Zeichner:</strong> <em>The Struggle for the Soul of Teacher Education</em> (2017).</li><li><strong>Complexo de Formação de Professores da UFRJ:</strong> Exemplo prático de indução e residência docente.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 9,
+        numero: "Dica 09",
+        paginas: "p. 102–103",
+        categoria: "Escola & ambiente",
+        titulo: "Repense o espaço da sala de aula: o ambiente educa",
+        descricao: "O autor defende que novos ambientes educativos — espaços abertos, laboratórios, ateliês — são essenciais para outras formas de aprender. No ensino superior, isso pode significar reorganizar cadeiras, propor atividades fora da sala convencional ou criar espaços de pesquisa coletiva.",
+        quote: "Precisamos desenhar os espaços escolares com a mesma ousadia com que foram pensados no século XIX.",
+        tabs: [
+          {
+            rotulo: "Ideias para minha sala",
+            conteudo: `<strong>Modelos de Organização Espacial:</strong><ul><li><strong>Ferradura/U:</strong> Perfeito para debates e seminários, integrando visualmente todo o grupo.</li><li><strong>Ilhas de Trabalho:</strong> Grupos de 4 a 5 alunos cooperando sobre projetos, estimulando o co-aprendizado.</li><li><strong>Ateliê Flexível:</strong> Uso de mobiliários empilháveis ou móveis rápidos para reconfigurar a sala em 5 minutos.</li><li><strong>Fileira Tradicional:</strong> Usada pontualmente para momentos de foco e testes individuais, nunca como única forma.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Estamos falando de arquitetura? Certamente. Precisamos desenhar ou remodelar os edifícios escolares com a mesma ousadia e criatividade com que foram pensados no século XIX. Agora, têm de ser espaços abertos, adaptáveis e flexíveis."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 103)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Ivan Illich:</strong> <em>Tools for Conviviality</em> (1973) - a convivialidade física.</li><li><strong>Edgar Morin:</strong> Conceitos de Metamorfose Institucional perante o século XXI.</li><li><strong>Relatório UNESCO (2021):</strong> A proteção física da escola presencial.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 10,
+        numero: "Dica 10",
+        paginas: "p. 105–107",
+        categoria: "Pedagogia",
+        titulo: "Pratique uma pedagogia do encontro: lide com o imprevisto",
+        descricao: "O capítulo 8 apresenta a pedagogia do encontro em seis princípios. Um dos mais aplicáveis: transformar imprevistos em momentos de aprendizagem. O que parece ruído em sala — a pergunta fora do tema, o conflito entre alunos, o silêncio — é matéria pedagógica.",
+        quote: "Para um professor, não há nada mais importante do que saber lidar com a imprevisibilidade de cada momento.",
+        tabs: [
+          {
+            rotulo: "Explorar princípios",
+            conteudo: `<strong>Os 6 Apontamentos da Pedagogia do Encontro:</strong><ul><li><strong>1. Relação Humana:</strong> É o cerne da docência.</li><li><strong>2. Encontro Intenso:</strong> Docência como mergulho no conhecimento cultural.</li><li><strong>3. Busca Contínua:</strong> Ensinar é pesquisar e se transformar, nunca repetição burocrática.</li><li><strong>4. Historicização:</strong> O conhecimento é fruto histórico das lutas do homem.</li><li><strong>5. Emoção como Cognição:</strong> Aprende-se com afeto.</li><li><strong>6. Pertencimento Mútuo:</strong> Formar um coletivo comunitário de trabalho comum.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"A relação pedagógica faz-se também com perguntas e dedos no ar, desentendimentos, sobrancelhas franzidas, sussurros, suspiros, olhares de surpresa, risos, tédio [...]. Para um professor, não há nada mais importante do que saber lidar com a imprevisibilidade de cada momento, transformando cada incidente numa ocasião de aprendizagem."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 106)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>António Damásio:</strong> <em>Sentir & Saber</em> (2020) - base neurológica da indissociabilidade entre emoção e razão.</li><li><strong>Gilles Deleuze:</strong> A docência e o pensamento como ato de busca e agenciamento.</li><li><strong>Nel Noddings:</strong> <em>Philosophy of Education</em> (a centralidade do cuidado).</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 11,
+        numero: "Dica 11",
+        paginas: "p. 115–117",
+        categoria: "Escola & ambiente",
+        titulo: "Conecte a escola ao território: a educação vai além da sala",
+        descricao: "Após a pandemia, ficou claro que as melhores respostas vieram de escolas que mantiveram vínculos com as famílias e com o entorno. O professor universitário pode fazer o mesmo: propor projetos de extensão, parcerias com comunidades, visitas técnicas e pesquisa aplicada.",
+        quote: "As melhores respostas vieram dos professores que, por dinâmicas de colaboração, conseguiram propostas robustas com preocupações inclusivas.",
+        tabs: [
+          {
+            rotulo: "Estratégias de conexão",
+            conteudo: `<strong>Mapa de Conectividade do Território:</strong><ul><li><strong>Extensão Universitária:</strong> Projetos com impacto comunitário real nos bairros vizinhos.</li><li><strong>Diálogo com as Famílias:</strong> Canais abertos de comunicação horizontal, compartilhando diagnósticos de cuidado.</li><li><strong>Parcerias Intersetoriais:</strong> Integração com redes de assistência, saúde e cultura locais para amparo integral.</li></ul>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Os professores. A pandemia tornou evidente que o potencial de resposta está mais nos professores do que nas políticas ou nas instituições. Professores bem preparados, com liberdade, trabalhando em conjunto, dentro e fora do espaço escolar, em ligação com as famílias, são sempre a melhor garantia de soluções oportunas e adequadas."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 115–116)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Ivan Illich:</strong> Conceito de capilaridade educativa e teias de convivência social.</li><li><strong>Bernard Charlot:</strong> <em>Éducation ou Barbarie: Pour uma Anthropologie de l'Éducation</em> (2020).</li><li><strong>Relatório UNESCO (2021):</strong> A escola integrada ao tecido territorial e comunitário.</li></ul>`
+          }
+        ]
+      },
+      {
+        id: 12,
+        numero: "Dica 12",
+        paginas: "p. 133–134",
+        categoria: "Política educacional",
+        titulo: "Participe das políticas: professores são agentes de transformação",
+        descricao: "O capítulo final cita Macron: dar aos professores mais autonomia, mais liberdade, novas margens de ação e de iniciativa. O professor deve participar de comitês, colegiados, projetos pedagógicos institucionais — não como obrigação burocrática, mas como protagonismo profissional.",
+        quote: "A transformação da educação começa mesmo com os professores. A metamorfose da escola, também.",
+        tabs: [
+          {
+            rotulo: "Como agir",
+            conteudo: `<strong>Roteiro de Engajamento Institucional:</strong><ol><li><strong>Ocupar Espaços:</strong> Participe ativamente de colegiados, comissões de curso e reuniões de planejamento.</li><li><strong>Sólido Embasamento:</strong> Proponha modificações curriculares embasadas em dados pedagógicos reais da realidade do chão da escola.</li><li><strong>Alianças Coletivas:</strong> Articule planejamentos conjuntos com outros professores da rede.</li><li><strong>Inovações Testáveis:</strong> Inicie pequenas inovações que possam ser registradas e publicadas como prova de viabilidade.</li></ol>`
+          },
+          {
+            rotulo: "Ler o trecho",
+            conteudo: `<em>"Sim, é preciso libertar a energia individual e coletiva dos professores. É preciso criar as condições favoráveis à 'coragem dos começos'. [...] A renovação da formação de professores é um dos pilares deste processo. [...] A transformação da educação começa mesmo com os professores."</em><br><br><strong>— António Nóvoa (Professores: Libertar o Futuro, p. 134)</strong>`
+          },
+          {
+            rotulo: "Indicação bibliográfica",
+            conteudo: `<strong>Referências Recomendadas:</strong><ul><li><strong>Paulo Freire:</strong> Conceito de Utopia, Esperança e a dialética do Denúncia/Anúncio.</li><li><strong>Ken Zeichner:</strong> <em>The Struggle for the Soul of Teacher Education</em> (2017).</li><li><strong>CFP/UFRJ:</strong> Estudo prático de modelo de Nova Institucionalidade na formação continuada.</li></ul>`
+          }
+        ]
+      }
+    ];
+
+    const coresCategorias = {
+      "Formação docente": "#1D9E75",
+      "Pedagogia": "#7F77DD",
+      "Escola & ambiente": "#D85A30",
+      "Identidade profissional": "#D4537E",
+      "Política educacional": "#BA7517"
+    };
+
+    const renderizarDicas = (categoriaFiltrada = "todas") => {
+      gridDicasContainer.innerHTML = "";
+      let totalVisivel = 0;
+
+      dicas.forEach(dica => {
+        if (categoriaFiltrada !== "todas" && dica.categoria !== categoriaFiltrada) {
+          return;
+        }
+        totalVisivel++;
+
+        const card = document.createElement("article");
+        card.classList.add("cartao-dica");
+        card.style.borderTop = `5px solid ${coresCategorias[dica.categoria] || "#ccc"}`;
+
+        // Render header
+        const header = document.createElement("div");
+        header.classList.add("dica-header");
+        header.innerHTML = `
+          <span class="dica-meta">${dica.numero} // ${dica.paginas}</span>
+          <span class="dica-categoria" style="background-color: ${coresCategorias[dica.categoria]}">${dica.categoria}</span>
+        `;
+        card.appendChild(header);
+
+        // Render Title
+        const title = document.createElement("h3");
+        title.innerText = dica.titulo;
+        card.appendChild(title);
+
+        // Render Description
+        const desc = document.createElement("p");
+        desc.classList.add("dica-descricao");
+        desc.innerText = dica.descricao;
+        card.appendChild(desc);
+
+        // Render Quote
+        const quote = document.createElement("blockquote");
+        quote.classList.add("dica-quote");
+        quote.innerText = `"${dica.quote}"`;
+        card.appendChild(quote);
+
+        // Render Tabs Container
+        const tabsContainer = document.createElement("div");
+        tabsContainer.classList.add("dica-botoes-tabs");
+
+        const painelAbas = document.createElement("div");
+        painelAbas.classList.add("dica-paineis-tabs");
+
+        dica.tabs.forEach((tab, index) => {
+          const btnTab = document.createElement("button");
+          btnTab.classList.add("btn-dica-tab");
+          btnTab.innerText = tab.rotulo;
+
+          const painelConteudo = document.createElement("div");
+          painelConteudo.classList.add("dica-painel-conteudo");
+          painelConteudo.innerHTML = tab.conteudo;
+
+          btnTab.addEventListener("click", () => {
+            const jaEstavaAtivo = btnTab.classList.contains("ativo");
+
+            // Remove active classes inside this card
+            tabsContainer.querySelectorAll(".btn-dica-tab").forEach(b => b.classList.remove("ativo"));
+            painelAbas.querySelectorAll(".dica-painel-conteudo").forEach(p => p.classList.remove("ativo"));
+
+            if (!jaEstavaAtivo) {
+              btnTab.classList.add("ativo");
+              painelConteudo.classList.add("ativo");
+            }
+          });
+
+          tabsContainer.appendChild(btnTab);
+          painelAbas.appendChild(painelConteudo);
+        });
+
+        card.appendChild(tabsContainer);
+        card.appendChild(painelAbas);
+
+        gridDicasContainer.appendChild(card);
+      });
+
+      // Update count
+      const btnTodas = filtrosDicasContainer.querySelector("[data-categoria='todas']");
+      if (btnTodas) {
+        btnTodas.innerText = `Todas (${totalVisivel})`;
+      }
+    };
+
+    // Filter bar event listeners
+    filtrosDicasContainer.querySelectorAll(".btn-filtro-dica").forEach(btn => {
+      btn.addEventListener("click", () => {
+        filtrosDicasContainer.querySelectorAll(".btn-filtro-dica").forEach(b => b.classList.remove("ativo"));
+        btn.classList.add("ativo");
+        renderizarDicas(btn.getAttribute("data-categoria"));
+      });
+    });
+
+    // Initial render
+    renderizarDicas();
   }
 });

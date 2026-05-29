@@ -1742,4 +1742,219 @@ h3 {
     font-size: 1rem;
 }
 
+/* ==================================================
+   SEÇÃO DE DIRETRIZES PRÁTICAS DOCENTES (RUMOS)
+   ================================================== */
+.filtros-dicas-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(44, 93, 99, 0.03);
+    padding: 1.2rem 1.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--cor-grade);
+    margin-bottom: 2.5rem;
+}
+
+.rotulo-filtro {
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.botoes-filtros-dicas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.btn-filtro-dica {
+    background: #ffffff;
+    border: 1px solid var(--cor-grade);
+    color: var(--cor-texto);
+    font-family: monospace;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-filtro-dica:hover {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+    transform: translateY(-1px);
+}
+
+.btn-filtro-dica.ativo {
+    background: var(--cor-destaque);
+    color: #ffffff;
+    border-color: var(--cor-destaque);
+}
+
+.grid-dicas-novo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.cartao-dica {
+    background: #ffffff;
+    border: 1px solid var(--cor-grade);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cartao-dica:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    transform: translateY(-3px);
+}
+
+.dica-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dica-meta {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--cor-link);
+    letter-spacing: 0.5px;
+}
+
+.dica-categoria {
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+.cartao-dica h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    color: var(--cor-destaque);
+}
+
+.dica-descricao {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--cor-texto);
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.dica-quote {
+    background: #fcf9f2;
+    border-left: 3px solid var(--cor-link);
+    padding: 0.8rem 1rem;
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #444444;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.dica-botoes-tabs {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--cor-grade);
+    padding-bottom: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.btn-dica-tab {
+    background: none;
+    border: none;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #666666;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.btn-dica-tab:hover {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--cor-texto);
+}
+
+.btn-dica-tab.ativo {
+    background: rgba(44, 93, 99, 0.08);
+    color: var(--cor-destaque);
+}
+
+.dica-paineis-tabs {
+    position: relative;
+}
+
+.dica-painel-conteudo {
+    display: none;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    background: #faf8f5;
+    border: 1px solid rgba(44, 93, 99, 0.15);
+    border-radius: 6px;
+    padding: 1.2rem;
+    animation: fadeInDica 0.25s ease forwards;
+}
+
+.dica-painel-conteudo.ativo {
+    display: block;
+}
+
+.dica-painel-conteudo ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.dica-painel-conteudo li {
+    margin-bottom: 0.4rem;
+}
+
+.dica-painel-conteudo em {
+    font-family: "Merriweather", serif;
+    color: #222222;
+}
+
+@keyframes fadeInDica {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .filtros-dicas-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1.2rem;
+    }
+    .grid-dicas-novo {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 
