@@ -10,12 +10,12 @@
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css?v=2.1" />
+        <link rel="stylesheet" href="style.css?v=3.8" />
     </head>
     <body class="pagina-interna">
         <header class="cabecalho-interno">
             <div class="logo-texto">
-                <a href="index.html">VOLTAR AO INÍCIO</a>
+                <a href="index.html">← VOLTAR AO INÍCIO</a>
             </div>
             <nav>
                 <ul class="navegacao-reticular">
@@ -27,7 +27,7 @@
                             >Chaves de Leitura</a
                         >
                     </li>
-                    <li><a href="rumos.html">Rumos</a></li>
+                    <li><a href="rumos.html">Aplicações e experimentos</a></li>
                 </ul>
             </nav>
         </header>
@@ -77,15 +77,88 @@
                     </div>
 
                     <div class="cenario futuro">
-                        <div class="ecologia-organica">
-                            <div class="forma azul-petroleo redonda"></div>
-                            <div class="forma terracota capsula"></div>
-                            <div class="forma creme conectora"></div>
-                            <div class="forma terracota redonda"></div>
-                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%" height="100%" class="svg-diagrama-futuro">
+                            <defs>
+                                <style>
+                                    .futuro-svg-bg { fill: #FFFFFF; }
+                                    .futuro-svg-grid { stroke: #D0D5D8; stroke-width: 1.5; fill: none; stroke-opacity: 0.6; }
+                                    .futuro-svg-grid-light { stroke: #E5E8EA; stroke-width: 1; fill: none; }
+                                    .futuro-svg-shape { stroke: #1C2D33; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+                                    .futuro-svg-teal { fill: #326B7A; }
+                                    .futuro-svg-terra { fill: #C8755C; }
+                                    .futuro-svg-multiply { mix-blend-mode: multiply; opacity: 0.95; }
+                                    .futuro-svg-detail { stroke: #1C2D33; stroke-width: 1; fill: none; stroke-opacity: 0.3; }
+                                </style>
+                            </defs>
+
+                            <rect class="futuro-svg-bg" width="100%" height="100%" />
+
+                            <g class="futuro-svg-grid-light">
+                                <line x1="0" y1="50" x2="800" y2="50" />
+                                <line x1="0" y1="150" x2="800" y2="150" />
+                                <line x1="0" y1="250" x2="800" y2="250" />
+                                <line x1="0" y1="350" x2="800" y2="350" />
+                                <line x1="0" y1="450" x2="800" y2="450" />
+                                
+                                <line x1="100" y1="0" x2="100" y2="550" />
+                                <line x1="200" y1="0" x2="200" y2="550" />
+                                <line x1="300" y1="0" x2="300" y2="550" />
+                                <line x1="500" y1="0" x2="500" y2="550" />
+                                <line x1="600" y1="0" x2="600" y2="550" />
+                                <line x1="700" y1="0" x2="700" y2="550" />
+                            </g>
+
+                            <g class="futuro-svg-grid">
+                                <rect x="30" y="30" width="740" height="490" />
+                                <rect x="50" y="50" width="700" height="450" />
+                                
+                                <line x1="20" y1="275" x2="780" y2="275" />
+                                <line x1="400" y1="20" x2="400" y2="530" />
+                                <line x1="120" y1="20" x2="120" y2="530" />
+                                <line x1="680" y1="20" x2="680" y2="530" />
+                                <line x1="20" y1="120" x2="780" y2="120" />
+                                <line x1="20" y1="430" x2="780" y2="430" />
+                                
+                                <circle cx="400" cy="275" r="180" />
+                                <circle cx="400" cy="275" r="100" />
+                                <rect x="120" y="120" width="560" height="310" />
+                                
+                                <line x1="120" y1="120" x2="680" y2="430" />
+                                <line x1="680" y1="120" x2="120" y2="430" />
+                            </g>
+
+                            <g class="futuro-svg-multiply">
+                                <circle class="futuro-svg-shape futuro-svg-teal" cx="130" cy="130" r="75" />
+                                <circle class="futuro-svg-shape futuro-svg-teal" cx="130" cy="430" r="75" />
+                                <circle class="futuro-svg-shape futuro-svg-teal" cx="320" cy="450" r="50" />
+                                <circle class="futuro-svg-shape futuro-svg-teal" cx="430" cy="100" r="50" />
+                                <path class="futuro-svg-shape futuro-svg-teal" d="M 290 260 A 80 80 0 0 1 450 260 A 80 80 0 0 1 430 315 L 430 430 A 20 20 0 0 1 390 430 L 390 335 A 80 80 0 0 1 290 260 Z" />
+                                <path class="futuro-svg-shape futuro-svg-teal" d="M 530 120 A 60 60 0 0 1 590 60 L 650 60 A 60 60 0 0 1 710 120 L 710 250 A 60 60 0 0 1 650 310 A 60 60 0 0 1 590 250 L 590 180 A 60 60 0 0 0 530 120 Z" />
+
+                                <circle class="futuro-svg-shape futuro-svg-terra" cx="290" cy="120" r="70" />
+                                <rect class="futuro-svg-shape futuro-svg-terra" x="50" y="220" width="180" height="70" rx="35" />
+                                <circle class="futuro-svg-shape futuro-svg-terra" cx="680" cy="120" r="65" />
+                                <circle class="futuro-svg-shape futuro-svg-terra" cx="540" cy="220" r="50" />
+                                <rect class="futuro-svg-shape futuro-svg-terra" x="390" y="380" width="170" height="110" rx="25" />
+                                <path class="futuro-svg-shape futuro-svg-terra" d="M 520 290 A 30 30 0 0 1 560 330 L 735 395 A 65 65 0 0 1 625 465 Z" />
+                                <path class="futuro-svg-shape futuro-svg-terra" d="M 480 120 A 30 30 0 0 1 520 160 L 415 250 A 50 50 0 0 1 410 305 L 290 405 A 60 60 0 0 1 190 355 L 320 240 A 50 50 0 0 1 345 205 Z" />
+                            </g>
+
+                            <g class="futuro-svg-detail">
+                                <circle cx="130" cy="130" r="50" />
+                                <line x1="55" y1="130" x2="205" y2="130" />
+                                <circle cx="680" cy="120" r="45" />
+                                <line x1="615" y1="120" x2="745" y2="120" />
+                                <circle cx="240" cy="380" r="50" />
+                                <circle cx="380" cy="260" r="40" />
+                                <circle cx="680" cy="430" r="45" />
+                                <rect x="70" y="235" width="140" height="40" rx="20" />
+                                <line x1="390" y1="260" x2="410" y2="260" />
+                                <line x1="400" y1="250" x2="400" y2="270" />
+                            </g>
+                        </svg>
                         <p class="rotulo-cenario">
-                            O Futuro Presente: Ambientes diversificados e
-                            colaborativos.
+                            O Futuro Presente: Ecologia aberta de ambientes diversificados e integrados.
                         </p>
                     </div>
             </section>
@@ -109,6 +182,6 @@
             </section>
         </main>
 
-        <script src="script.js"></script>
+        <script src="script.js?v=3.8"></script>
     </body>
 </html>

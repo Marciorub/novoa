@@ -99,113 +99,193 @@ document.addEventListener("DOMContentLoaded", () => {
         id: "metamorfose",
         nome: "Metamorfose da Escola",
         categoria: "Ruptura de Paradigma",
-        citacao: "A forma da escola, o conhecimento escolar e a ligação com a economia têm de ser repensados à luz das realidades contemporâneas, por meio de um processo de metamorfose da escola. A metamorfose não é uma reforma; é a transmutação estrutural dos pilares institucionais.",
+        citacao: `A forma da escola, o conhecimento escolar e a ligação com a economia têm de ser repensados à luz das realidades contemporâneas, por meio de um processo de metamorfose da escola. A metamorfose não é uma reforma; é a transmutação estrutural dos pilares institucionais.`,
         paginas: "Páginas 37, 118 e 123",
-        provocacao: "De que forma as amarras administrativas do gerencialismo de resultados e as avaliações externas baseadas em ranqueamento burocrático bloqueiam o surgimento desse 'princípio de uma nova instituição'?"
+        provocacao: `De que forma as amarras administrativas do gerencialismo de resultados e as avaliações externas baseadas em ranqueamento burocrático bloqueiam o surgimento desse 'princípio de uma nova instituição'?`
       },
       {
         id: "celular",
         nome: "Forma Escolar Celular",
         categoria: "Organização do Espaço",
-        citacao: "Organizacionalmente, a escola adquire a configuração que, na essência, se mantém até os dias de hoje: um edifício próprio, que tem como núcleo estruturante a sala de aula celular. Essa gramática de tempos fragmentados e professores isolados encerrou o seu século histórico.",
+        citacao: `Organizacionalmente, a escola adquire a configuração que, na essência, se mantém até os dias de hoje: um edifício próprio, que tem como núcleo estruturante a sala de aula celular. Essa gramática de tempos fragmentados e professores isolados encerrou o seu século histórico.`,
         paginas: "Páginas 91 e 124",
-        provocacao: "Quais são as implicações epistemológicas e de classe decorrentes da persistência estrutural do isolamento celular no cotidiano das escolas de periferia sob pressões neoliberais?"
+        provocacao: `Quais são as implicações epistemológicas e de classe decorrentes da persistência estrutural do isolamento celular no cotidiano das escolas de periferia sob pressões neoliberais?`
       },
       {
         id: "contingente",
         nome: "Conhecimento Contingente",
         categoria: "Epistemologia Docente",
-        citacao: "É um conhecimento que não existe fora da ação, que se constrói no seu interior. O trabalho pedagógico é definido pela imprevisibilidade, pela capacidade de os professores darem respostas reflexivas imediatas a situações educativas singulares.",
+        citacao: `É um conhecimento que não existe fora da ação, que se constrói no seu interior. O trabalho pedagógico é definido pela imprevisibilidade, pela capacidade de os professores darem respostas reflexivas imediatas a situações educativas singulares.`,
         paginas: "Páginas 58 e 68",
-        provocacao: "Como os docentes da rede básica podem legitimar academicamente esse saber produzido na contingência do chão da escola, frente à tradicional hegemonia positivista universitária?"
+        provocacao: `Como os docentes da rede básica podem legitimar academicamente esse saber produzido na contingência do chão da escola, frente à tradicional hegemonia positivista universitária?`
       },
       {
         id: "coletivo",
         nome: "Conhecimento Coletivo",
         categoria: "Epistemologia Docente",
-        citacao: "A segunda característica do conhecimento profissional docente é a sua natureza coletiva, o fato de se constituir no interior de uma profissão ou, melhor dizendo, de um coletivo profissional de trabalho. A docência não é um ato de indivíduos isolados, mas uma colegialidade.",
+        citacao: `A segunda característica do conhecimento profissional docente é a sua natureza coletiva, o fato de se constituir no interior de uma profissão ou, melhor dizendo, de um coletivo profissional de trabalho. A docência não é um ato de indivíduos isolados, mas uma colegialidade.`,
         paginas: "Páginas 69-70 e 75",
-        provocacao: "De que maneira as políticas públicas contemporâneas de precarização contratual e terceirização docente nas redes estaduais sabotam a consolidação dessa dimensão coletiva e colaborativa?"
+        provocacao: `De que maneira as políticas públicas contemporâneas de precarização contratual e terceirização docente nas redes estaduais sabotam a consolidação dessa dimensão coletiva e colaborativa?`
       },
       {
         id: "publico",
         nome: "Conhecimento Público",
         categoria: "Epistemologia Docente",
-        citacao: "A terceira característica do conhecimento profissional docente é a sua natureza pública, o que implica um processo de escrita e de publicação. Sem a documentação sistemática e a partilha do saber, a docência permanece invisibilizada pelas burocracias escolares.",
+        citacao: `A terceira característica do conhecimento profissional docente é a sua natureza pública, o que implica um processo de escrita e de publicação. Sem a documentação sistemática e a partilha do saber, a docência permanece invisibilizada pelas burocracias escolares.`,
         paginas: "Páginas 58, 71 e 72",
-        provocacao: "Que estratégias metodológicas de pesquisa-ação ou escrita coletiva podem estimular a transição da oralidade da prática docente para a documentação acadêmica sistemática?"
+        provocacao: `Que estratégias metodológicas de pesquisa-ação ou escrita coletiva podem estimular a transição da oralidade da prática docente para a documentação acadêmica sistemática?`
       },
       {
         id: "publica-acao",
         nome: "Pública Ação (Escrita Docente)",
         categoria: "Epistemologia e Política",
-        citacao: "A escrita do professor é o mecanismo de inserção da categoria no debate social. A escrita e a publicação constituem-se como um ato político de autoria docente. Publicação? Pública ação. Um conhecimento profissional não se constrói se for puramente privado.",
+        citacao: `A escrita do professor é o mecanismo de inserção da categoria no debate social. A escrita e a publicação constituem-se como um ato político de autoria docente. Publicação? Pública ação. Um conhecimento profissional não se constrói se for puramente privado.`,
         paginas: "Páginas 71-72 e 76",
-        provocacao: "De que forma a 'pública ação' da escrita pedagógica age como força de resistência intelectual contra a invasão silenciosa de materiais padronizados e apostilados pelas secretarias estaduais?"
+        provocacao: `De que forma a 'pública ação' da escrita pedagógica age como força de resistência intelectual contra a invasão silenciosa de materiais padronizados e apostilados pelas secretarias estaduais?`
       },
       {
         id: "terceiro-lugar",
         nome: "O Terceiro Lugar Institucional",
         categoria: "Formação de Professores",
-        citacao: "A saída está sempre num 'terceiro lugar' que é muito mais do que a simples soma dos dois lugares anteriores (teoria e prática). É um espaço híbrido de co-governança compartilhada, unindo a universidade, escolas básicas e coletivos profissionais.",
+        citacao: `A saída está sempre num 'terceiro lugar' que é muito mais do que a simples soma dos dois lugares anteriores (teoria e prática). É um espaço híbrido de co-governança compartilhada, unindo a universidade, escolas básicas e coletivos profissionais.`,
         paginas: "Páginas 46, 47 e 74",
-        provocacao: "Quais os principais desafios políticos e corporativos na implantação sustentável de 'Casas Comuns de Formação' frente ao produtivismo individualista imposto à pós-graduação acadêmica pela regulação ministerial?"
+        provocacao: `Quais os principais desafios políticos e corporativos na implantação sustentável de 'Casas Comuns de Formação' frente ao produtivismo individualista imposto à pós-graduação acadêmica pela regulação ministerial?`
       },
       {
         id: "terceiro-instruido",
         nome: "O Terceiro Instruído",
         categoria: "Filosofia do Aprendizado",
-        citacao: "O aprendizado implica sempre uma viagem, um deslocamento, um descolar da nossa margem de origem rumo à outra margem... É nesse deslocamento que nos tornamos outros, que aprendemos. O terceiro instruído carrega em si a pele existencial e intelectual de ambas as margens.",
+        citacao: `O aprendizado implica sempre uma viagem, um deslocamento, um descolar da nossa margem de origem rumo à outra margem... É nesse deslocamento que nos tornamos outros, que aprendemos. O terceiro instruído carrega em si a pele existencial e intelectual de ambas as margens.`,
         paginas: "Páginas 55-56 (Apoiado em Michel Serres)",
-        provocacao: "Como a metáfora do descolamento cultural e epistemológico de Michel Serres tensiona o inatismo psicológico ou o espontaneísmo das correntes pedagógicas não diretivas no debate contemporâneo?"
+        provocacao: `Como a metáfora do descolamento cultural e epistemológico de Michel Serres tensiona o inatismo psicológico ou o espontaneísmo das correntes pedagógicas não diretivas no debate contemporâneo?`
       },
       {
         id: "comum",
         nome: "O Comum vs. Identitarismo",
         categoria: "Finalidade Social",
-        citacao: "Este comum não remete para uma 'comunidade de identidade' (onde convivemos com iguais), mas para uma 'comunidade de trabalho' (onde cooperamos com diferentes). Assenta num princípio de encontro e comunicação intercultural na esfera pública.",
+        citacao: `Este comum não remete para uma 'comunidade de identidade' (onde convivemos com iguais), mas para uma 'comunidade de trabalho' (onde cooperamos com diferentes). Assenta num princípio de encontro e comunicação intercultural na esfera pública.`,
         paginas: "Página 38",
-        provocacao: "Em tempos de bolhas algorítmicas que nos confinam ao convívio com os semelhantes, de que modo a escola pública física se ergue como o único espaço de socialização forçada com a alteridade democrática?"
+        provocacao: `Em tempos de bolhas algorítmicas que nos confinam ao convívio com os semelhantes, de que modo a escola pública física se ergue como o único espaço de socialização forçada com a alteridade democrática?`
       },
       {
         id: "liberdades",
         nome: "As Seis Liberdades",
         categoria: "Autonomia Pedagógica",
-        citacao: "Ficam aqui três liberdades que definem a educação pública: a liberdade que é igualdade, a liberdade que é diversidade e a liberdade que é aprendizagem. E completam-se com três liberdades de ação: participação, autonomia e criação.",
+        citacao: `Ficam aqui três liberdades que definem a educação pública: a liberdade que é igualdade, a liberdade que é diversidade e a liberdade que é aprendizagem. E completam-se com três liberdades de ação: participação, autonomia e criação.`,
         paginas: "Páginas 53-56",
-        provocacao: "Como reatar a agência docente e as 'seis liberdades' sem expor os profissionais da educação básica a perseguições ideológicas promovidas por movimentos neoconservadores de patrulhamento de conteúdo?"
+        provocacao: `Como reatar a agência docente e as 'seis liberdades' sem expor os profissionais da educação básica a perseguições ideológicas promovidas por movimentos neoconservadores de patrulhamento de conteúdo?`
       },
       {
         id: "humana-docencia",
         nome: "A Humana Docência",
         categoria: "Missão Humanista",
-        citacao: "A defesa de uma 'humana docência', de um trabalho de 'educar humanos por humanos para o bem da humanidade', justifica-se na perspectiva de libertar o futuro. A mediação emocional e intelectual presencial é a barreira inegociável contra a desumanização.",
+        citacao: `A defesa de uma 'humana docência', de um trabalho de 'educar humanos por humanos para o bem da humanidade', justifica-se na perspectiva de libertar o futuro. A mediação emocional e intelectual presencial é a barreira inegociável contra a desumanização.`,
         paginas: "Páginas 22 e 24",
-        provocacao: "De que maneira a incorporação irrestrita de Inteligências Artificiais e plataformas adaptativas pelas redes públicas básicas de ensino fragiliza as bases intersubjetivas e amorosas que constituem a relação pedagógica real?"
+        provocacao: `De que maneira a incorporação irrestrita de Inteligências Artificiais e plataformas adaptativas pelas redes públicas básicas de ensino fragiliza as bases intersubjetivas e amorosas que constituem a relação pedagógica real?`
       },
       {
         id: "transbordante",
         nome: "Escola Transbordante",
         categoria: "Limites da Instituição",
-        citacao: "Não vale a pena alimentarmos ilusões, trazendo tudo para dentro da escola, uma 'escola transbordante', sem rumo e sem sentido. Ao sobrecarregarmos a escola com demandas de toda ordem social, descaracterizamos a sua missão fundamental de cultura e socialização.",
+        citacao: `Não vale a pena alimentarmos ilusões, trazendo tudo para dentro da escola, uma 'escola transbordante', sem rumo e sem sentido. Ao sobrecarregarmos a escola com demandas de toda ordem social, descaracterizamos a sua missão fundamental de cultura e socialização.`,
         paginas: "Página 126",
-        provocacao: "Que critérios epistemológicos e limites de atuação podem ser delimitados coletivamente para que a escola pública preserve a sua especificidade formativa democrática sem ignorar as demandas éticas de sua comunidade?"
+        provocacao: `Que critérios epistemológicos e limites de atuação podem ser delimitados coletivamente para que a escola pública preserve a sua especificidade formativa democrática sem ignorar as demandas éticas de sua comunidade?`
       },
       {
         id: "inducao",
-        nome: "Indução Profissional",
+        nome: "Indução Profissional (Mentoria)",
         categoria: "Desenvolvimento Docente",
-        citacao: "Concentremo-nos nos primeiros anos de exercício docente, esse tempo entre dois, entre o fim da licenciatura e o princípio da profissão. É um período crucial no qual os novatos necessitam do acolhimento intergeracional de professores mentores estáveis.",
+        citacao: `Concentremo-nos nos primeiros anos de exercício docente, esse tempo entre dois, entre o fim da licenciatura e o princípio da profissão. É um período crucial no qual os novatos necessitam do acolhimento intergeracional de professores mentores estáveis.`,
         paginas: "Páginas 77, 81 e 82",
-        provocacao: "Que arranjos curriculares de contratação e plano de carreira podem viabilizar que professores iniciantes dediquem tempo ao planejamento em parceria e à co-docência em vez de serem atirados ao isolamento de salas difíceis?"
+        provocacao: `Que arranjos curriculares de contratação e plano de carreira podem viabilizar que professores iniciantes dediquem tempo ao planejamento em parceria e à co-docência em vez de serem atirados ao isolamento de salas difíceis?`
       },
       {
         id: "capilaridade",
         nome: "Capilaridade Educativa",
         categoria: "Territorialidade",
-        citacao: "É preciso pensar o que designamos por capilaridade educativa, metáfora que procura traduzir uma disseminação da educação por diferentes espaços e tempos do território comum, rompendo com o isolamento do edifício escolar clássico.",
+        citacao: `É preciso pensar o que designamos por capilaridade educativa, metáfora que procura traduzir uma disseminação da educação por diferentes espaços e tempos do território comum, rompendo com o isolamento do edifício escolar clássico.`,
         paginas: "Página 101",
-        provocacao: "De que forma essa disseminação capilar da educação pela cidade pode ser operada sem enfraquecer o estatuto e a centralidade política da escola pública presencial física como lugar do comum?"
+        provocacao: `De que forma essa disseminação capilar da educação pela cidade pode ser operada sem enfraquecer o estatuto e a centralidade política da escola pública presencial física como lugar do comum?`
+      },
+      {
+        id: "pilares-democracia",
+        nome: "Professores como Pilares da Democracia",
+        categoria: "Política e Democracia",
+        citacao: `O papel [dos professores] é primordial como pilares da democracia, numa educação baseada nos direitos humanos e nos deveres que esses direitos nos impõem.`,
+        paginas: "Página 19",
+        provocacao: `“A democracia deve renascer a cada geração, e esse trabalho é uma missão central dos professores”, para afirmar que a escola pública é uma instituição democrática antes de ser um serviço de instrução. Mas o que sustenta essa afirmação quando a própria escola é organizada de forma hierárquica, curricular e avaliativa por instâncias que os professores não controlam?`
+      },
+      {
+        id: "pedagogia-encontro",
+        nome: "Pedagogia do Encontro",
+        categoria: "Pedagogia",
+        citacao: `Nada substitui um bom professor. Nada. Nada mesmo. Nada o substitui para apresentar o mundo, todos os mundos, aos mais novos. Nada o substitui para dar aos alunos a possibilidade de chegarem mais longe, aonde nunca chegariam sem o seu trabalho, sem a sua dedicação.`,
+        paginas: "Página 43",
+        provocacao: `Nóvoa afirma que a escola deve apresentar “a humanidade toda”, e não uma visão parcial, familiar, religiosa ou ideológica. Mas o encontro pedagógico sempre ocorre entre sujeitos situados: um professor com sua própria “cor”, história, cultura de classe; um aluno com a sua. A neutralidade do “encontro com todos os mundos” é possível, ou é, ela mesma, uma posição cultural particular que se universaliza?`
+      },
+      {
+        id: "inducao-jovens",
+        nome: "Indução dos Jovens Professores",
+        categoria: "Desenvolvimento Docente",
+        citacao: `É nos diálogos e vínculos entre jovens professores e professores mais experientes que se define a possibilidade de novos processos e de novas práticas pedagógicas. [...] A profissão docente não terá futuro se não cuidar melhor dos seus professores mais jovens. Esse período entre dois, entre a formação e a profissão, é decisivo.`,
+        paginas: "Página 81",
+        provocacao: `Nóvoa identifica três silêncios que marcam o período de indução: o das universidades (que consideram sua missão encerrada com o diploma), o das políticas educativas (incapazes de organizar o acolhimento) e o da própria profissão docente (que pouco acompanha seus mais jovens). No Brasil, esses três silêncios se aprofundam em contextos de precarização, alta rotatividade e ausência de carreira estruturada, especialmente nas redes municipais periféricas.`
+      },
+      {
+        id: "racionalidade-neoliberal",
+        nome: "Racionalidade Neoliberal",
+        categoria: "Crítica ao Neoliberalismo",
+        citacao: `Nos últimos anos, assistimos à proliferação de rankings de escolas, de exames padronizados e de formas de controlo exterior que tendem a reduzir o professor ao papel de um mero técnico ou executor de decisões tomadas noutros locais.`,
+        paginas: "Páginas 43 e 44",
+        provocacao: `A organização do sistema educacional segundo lógicas de mercado: eficiência, mérito individual, gestão por resultados e competição entre escolas e alunos. Nóvoa critica diretamente essa racionalidade ao denunciar a proliferação de rankings, avaliações estandardizadas e a redução do professor a “executor de programas” definidos externamente. No Brasil, manifesta-se em reformas como a BNCC, o modelo de escolas charter e a lógica de bônus por desempenho.`
+      },
+      {
+        id: "contradicoes-neoliberal",
+        nome: "Contradições do Neoliberalismo na Educação",
+        categoria: "Crítica ao Neoliberalismo",
+        citacao: `Nos últimos anos, a queixa mais ouvida dos professores é a burocracia, a imensidão de tarefas, tantas vezes inúteis, que infernizam o seu dia a dia. E têm razão. As possibilidades tecnológicas multiplicam infinitamente os impulsos burocráticos [...] que têm custos elevadíssimos para os burocratizados.`,
+        paginas: "Páginas 47 e 57",
+        provocacao: `Tensão estrutural entre o discurso de melhoria da qualidade educacional — prometida pelas reformas orientadas pelo mercado — e os resultados reais, que incluem aprofundamento das desigualdades, precarização docente e exclusão dos mais vulneráveis. As políticas que afirmam “libertar” a educação frequentemente aprisionam os professores em burocracia e métricas. A contradição expressa no Brasil tem intensidade particular devido à herança colonial e desigualdades históricas.`
+      },
+      {
+        id: "desigualdades-educacionais",
+        nome: "Desigualdades Educacionais",
+        categoria: "Finalidade Social",
+        citacao: `Quando se compara a escolha da escola à escolha das malas, dos sapatos, do jornal, do carro ou da casa, perde-se todo o sentido, social e cultural, individual e coletivo, do ato de educar. A escola pública cria um público, forma públicos, cidadãos.`,
+        paginas: "Páginas 16, 57 e 58",
+        provocacao: `Diferenças sistemáticas no acesso, permanência e qualidade associadas a classe social, raça, território e geração. Para Nóvoa, a educação reproduz estratificações se não for um lugar de encontro. No Brasil, essas desigualdades são fruto de escolhas históricas acumuladas que a racionalidade neoliberal tende a naturalizar como mérito individual.`
+      },
+      {
+        id: "especificidade-brasileira",
+        nome: "Especificidade Brasileira",
+        categoria: "Brasil e Globalização",
+        citacao: `Por outro lado, graças a uma expansão sem precedentes de uma “indústria global da educação” [...], fortemente assente no digital, com ofertas privadas, mas interessada sobretudo na produção de conteúdos, materiais e instrumentos de gestão para a educação pública.`,
+        paginas: "Página 95",
+        provocacao: `Condição pela qual o Brasil exemplifica tendências mundiais da educação — como a pressão neoliberal, a crise de valorização docente e a desigualdade estrutural — mas com determinantes históricos próprios: colonialismo, escravidão, concentração fundiária e regionalismo. Nóvoa não trata do Brasil diretamente, mas seu diagnóstico de enfraquecimento profissional e mercantilização do ensino aplica-se aqui com particular intensidade.`
+      },
+      {
+        id: "consumismo-pedagogico",
+        nome: "Consumismo Pedagógico",
+        categoria: "Crítica ao Neoliberalismo",
+        citacao: `Com discursos atraentes, inovadores, empreendedores, criativos, negam a herança histórica da escola e procuram fomentar uma educação esvaziada das dimensões públicas e comuns, pautada pelo ritmo do “consumismo pedagógico” e do “solucionismo tecnológico”.`,
+        paginas: "Página 95",
+        provocacao: `Como a mercantilização do ensino reduz o ato educativo a um produto de consumo individualizável e adaptável às demandas imediatas de mercado, desmantelando a função pública, civilizatória e socializadora que define a instituição escolar?`
+      },
+      {
+        id: "solucionismo-tecnologico",
+        nome: "Solucionismo Tecnológico",
+        categoria: "Crítica ao Neoliberalismo",
+        citacao: `As questões digitais, enquanto fatores de ligação, mas também de divisão, com as ilusões de um “solucionismo tecnológico” e os perigos de uma inteligência artificial sem limites.`,
+        paginas: "Páginas 16 e 95",
+        provocacao: `De que maneira a pressuposição de que a tecnologia digital e o ensino remoto ou híbrido podem resolver os problemas de qualidade e cobertura de ensino mascara o desinvestimento real na infraestrutura escolar pública e na valorização da humana docência?`
+      },
+      {
+        id: "industria-global",
+        nome: "Indústria Global da Educação",
+        categoria: "Crítica ao Neoliberalismo",
+        citacao: `Caso contrário, deixaremos as dinâmicas de transformação nas mãos de interesses privados, da grande indústria global da educação, o que pode mesmo pôr em risco a renovação da educação como bem público e comum.`,
+        paginas: "Páginas 57 e 95",
+        provocacao: `Quais as consequências éticas e políticas quando a produção de conteúdo curricular, plataformas digitais e sistemas de avaliação padronizada é terceirizada para corporações multinacionais de tecnologia que operam a educação sob a lógica do lucro?`
       }
     ];
 
@@ -396,7 +476,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     ];
 
-    const calcularDiagnostico = () => {
+    const calcularDiagnostico = (evento) => {
       let soma = 0;
       sliders.forEach(slider => {
         const val = parseInt(slider.value);
@@ -426,9 +506,18 @@ document.addEventListener("DOMContentLoaded", () => {
         diagnosticoIndex = 2;
       }
       
+      // Disparar animação de pulso reativa ao interagir com o slider
+      if (evento) {
+        const radialMedia = painelRumos.querySelector(".radial-media");
+        if (radialMedia) {
+          radialMedia.classList.remove("pulso-ativo");
+          void radialMedia.offsetWidth; // Forçar reflow para reiniciar animação
+          radialMedia.classList.add("pulso-ativo");
+        }
+      }
+
       if (mediaDisplay) {
         mediaDisplay.innerText = estagioGlobal;
-        mediaDisplay.style.fontSize = "1.05rem";
       }
 
       if (diagnosticoTitulo && diagnosticoTexto) {
@@ -437,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
     sliders.forEach(slider => {
-      slider.addEventListener("input", calcularDiagnostico);
+      slider.addEventListener("input", (e) => calcularDiagnostico(e));
     });
 
     calcularDiagnostico();
@@ -569,10 +658,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const botao = document.createElement("button");
         botao.className = "botao-capitulo";
         botao.setAttribute("data-idx", idx);
+        botao.setAttribute("title", cap.titulo);
         
         botao.innerHTML = `
           <span class="numero-cap">${cap.numero}</span>
-          <span>${cap.titulo}</span>
         `;
         
         if (idx === 0) {

@@ -3,19 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rumos da Escola - Professores: Libertar o Futuro</title>
+        <title>Aplicações e Experimentos - Professores: Libertar o Futuro</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css?v=3.0" />
+        <link rel="stylesheet" href="style.css?v=3.8" />
     </head>
     <body class="pagina-interna">
         <header class="cabecalho-interno">
             <div class="logo-texto">
-                <a href="index.html">VOLTAR AO INÍCIO</a>
+                <a href="index.html">← VOLTAR AO INÍCIO</a>
             </div>
             <nav>
                 <ul class="navegacao-reticular">
@@ -23,7 +23,7 @@
                     <li><a href="glossario.html">Glossário</a></li>
                     <li><a href="dialogos.html">Diálogos</a></li>
                     <li><a href="chaves-leitura.html">Chaves de Leitura</a></li>
-                    <li><a href="rumos.html" class="ativo">Rumos</a></li>
+                    <li><a href="rumos.html" class="ativo">Aplicações e experimentos</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,13 +37,16 @@
                 <button class="aba-rumos" data-aba="diretrizes">
                     <span class="numero-aba">02 //</span> Diretrizes & Dicas Práticas
                 </button>
+                <button class="aba-rumos" data-aba="extensao">
+                    <span class="numero-aba">03 //</span> Uma Aplicação na Universidade
+                </button>
             </div>
 
             <!-- Painel 1: Autodiagnóstico Escolar -->
             <div class="painel-aba ativo" id="conteudo-autodiagnostico">
                 <section class="territorio">
                     <div class="decoracao-arquitetonica">04 // DIAGNÓSTICO E PROPOSIÇÃO</div>
-                    <h2>Rumos e Autodiagnóstico Escolar</h2>
+                    <h2>Aplicações e Experimentos: Autodiagnóstico Escolar</h2>
                     <p>
                         Em qual momento de transformação se encontra a sua escola, tendo como lente os eixos de metamorfose de António Nóvoa? Ajuste os controles para expressar como você percebe a presença dessas dimensões no dia a dia. A proposta aqui não é quantificar ou medir, mas criar um retrato qualitativo que sirva como ponto de partida para o diálogo e a reflexão.
                     </p>
@@ -149,12 +152,134 @@
 
                     <!-- Grid de Dicas -->
                     <div class="grid-dicas-novo" id="grid-dicas-container">
-                        <!-- Gerado dinamicamente via JS em script.js -->
+                        <!-- Gerado dinamicamente via JS em script.js?v=3.8 -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Painel 3: Uma Aplicação na Universidade -->
+            <div class="painel-aba" id="conteudo-extensao">
+                <section class="territorio sem-borda" style="padding-top: 1rem;">
+                    <div class="decoracao-arquitetonica">06 // UNI RV E A EXTENSÃO</div>
+                    <h2>Projetos que Libertam o Futuro: Cartilha de Extensão UniRV</h2>
+                    <p style="margin-top: -1rem; margin-bottom: 2.5rem;">
+                        Uma tradução metodológica e prática das teses de António Nóvoa (2023) aplicada diretamente à extensão universitária da <strong>Universidade de Rio Verde (UniRV)</strong>.
+                    </p>
+
+                    <div class="bloco-introducao-extensao" style="background: rgba(44, 93, 99, 0.03); border: 1px solid rgba(44, 93, 99, 0.15); border-radius: 8px; padding: 2rem; margin-bottom: 3rem;">
+                        <h3 style="margin-bottom: 1rem; font-family: 'Merriweather', serif;">Articulação entre Extensão e Transformação Escolar</h3>
+                        <p style="margin-bottom: 1rem;">
+                            Por que a extensão universitária na UniRV se debruça sobre a obra <em>Professores: Libertar o Futuro</em>? António Nóvoa nos ensina que a metamorfose da escola não se dá por decretos ou reformas burocráticas impostas de cima para baixo, mas sim a partir de dentro da própria profissão, na alteração das práticas pedagógicas, na flexibilização dos espaços-tempos e no fortalecimento de redes coletivas de formação docente.
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            A extensão universitária na UniRV atua exatamente nesse <strong>"Terceiro Espaço"</strong> híbrido de governança compartilhada entre a universidade, escolas da educação básica e movimentos sociais do território. Ela rompe os muros da sala de aula tradicional, estabelecendo a <em>capilaridade educativa</em> no ecossistema do Cerrado e do Sudoeste de Goiás, integrando a historicização local de saberes agrícolas e a co-docência intergeracional. A cartilha elaborada pelo Comitê de Extensão da UniRV visa subsidiar professores e estudantes na construção de propostas estruturadas que realmente libertem o futuro de fatalidades mercantis e formalidades inúteis.
+                        </p>
+                        <div class="botoes-download-cartilha" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="cartilha_extensao_novoa.pdf" download class="btn-filtro-dica ativo" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-family: monospace;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                DOWNLOAD DA CARTILHA (PDF)
+                            </a>
+                            <a href="cartilha_extensao_novoa.docx" download class="btn-filtro-dica" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-family: monospace; border: 1px solid var(--cor-grade); background: none; color: var(--cor-texto);">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                DOWNLOAD DA CARTILHA (DOCX)
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1.5rem; font-family: 'Merriweather', serif;">Os 8 Princípios de Nóvoa Aplicados à Extensão na UniRV</h3>
+                    <div class="grid-dicas-novo" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                        <!-- Princípio 1 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #1D9E75; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 01 // pp. 34, 57, 101</span>
+                                <span class="dica-categoria" style="background-color: #1D9E75">Território e Comunidade</span>
+                            </div>
+                            <h3>Capilaridade Educativa e Convivialidade</h3>
+                            <p class="dica-descricao">A extensão de fato rompe os muros da universidade quando a comunidade local tem voz ativa e de influência. Trata-se do reforço de um espaço de convivialidade (Ivan Illich) em que a realidade local e a escuta do território alteram e coconstróem o projeto.</p>
+                        </article>
+
+                        <!-- Princípio 2 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #7F77DD; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 02 // pp. 69–70</span>
+                                <span class="dica-categoria" style="background-color: #7F77DD">Coletivo Docente</span>
+                            </div>
+                            <h3>Co-docência e Colegialidade</h3>
+                            <p class="dica-descricao">Os professores envolvidos se reúnem para além das questões logísticas, refletindo e debatendo sobre a prática pedagógica ("O que mudou em mim são os outros"). A docência na extensão é entendida como uma colegialidade.</p>
+                        </article>
+
+                        <!-- Princípio 3 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #D85A30; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 03 // pp. 81–84</span>
+                                <span class="dica-categoria" style="background-color: #D85A30">Indução Profissional</span>
+                            </div>
+                            <h3>Acolhimento de Novos Professores</h3>
+                            <p class="dica-descricao">O projeto funciona como espaço de indução. Professores veteranos orientam ativamente novos docentes envolvidos no projeto, e estudantes veteranos lideram o acolhimento pedagógico de estudantes ingressantes.</p>
+                        </article>
+
+                        <!-- Princípio 4 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #D4537E; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 04 // pp. 15–17, 102</span>
+                                <span class="dica-categoria" style="background-color: #D4537E">Parceria Pedagógica</span>
+                            </div>
+                            <h3>Aprendizagem entre Pares e Colaboração</h3>
+                            <p class="dica-descricao">"Ninguém se educa sozinho". O projeto prevê atividades estruturadas em que os discentes atuam na mediação e no ensino de outros estudantes e da comunidade, entendendo que ensinar e partilhar é o motor do aprender.</p>
+                        </article>
+
+                        <!-- Princípio 5 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #BA7517; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 05 // p. 106</span>
+                                <span class="dica-categoria" style="background-color: #BA7517">Historicização do Saber</span>
+                            </div>
+                            <h3>Âncora Cultural do Contexto Local</h3>
+                            <p class="dica-descricao">Ensinar a disciplina como se fosse história. O projeto não é importado de forma abstrata: ele é ancorado na realidade da região do agronegócio goiano, no ecossistema do Cerrado e na memória local do Sudoeste de Goiás.</p>
+                        </article>
+
+                        <!-- Princípio 6 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #1a365d; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 06 // pp. 36, 58</span>
+                                <span class="dica-categoria" style="background-color: #1a365d">Intergeracionalidade</span>
+                            </div>
+                            <h3>Cuidado Mútuo entre Gerações</h3>
+                            <p class="dica-descricao">Conectando múltiplas faixas geracionais em cooperação genuína, onde idosos da comunidade local ou profissionais experientes partilham saberes tradicionais com os jovens universitários em vias de via dupla.</p>
+                        </article>
+
+                        <!-- Princípio 7 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #2c5d63; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 07 // pp. 71–72</span>
+                                <span class="dica-categoria" style="background-color: #2c5d63">Escrita e Registro</span>
+                            </div>
+                            <h3>Pública Ação Docente e Autoria</h3>
+                            <p class="dica-descricao">"Uma profissão que não se escreve não se inscreve socialmente". O projeto supera a lógica de relatórios burocráticos internos e incentiva o registro público, autoral e reflexivo das aprendizagens docentes.</p>
+                        </article>
+
+                        <!-- Princípio 8 -->
+                        <article class="cartao-dica" style="border-top: 5px solid #b45a3d; display: block;">
+                            <div class="dica-header">
+                                <span class="dica-meta">Princípio 08 // pp. 102–103</span>
+                                <span class="dica-categoria" style="background-color: #b45a3d">Ambiente Ecológico</span>
+                            </div>
+                            <h3>Espaços de Ação e Consequência Real</h3>
+                            <p class="dica-descricao">Uso do território como laboratório vivo e ateliê. O projeto exige dos estudantes a tomada de decisão com implicações reais e gerência das incertezas, experimentando no chão da comunidade o conhecimento contingente.</p>
+                        </article>
                     </div>
                 </section>
             </div>
         </main>
 
-        <script src="script.js?v=3.0"></script>
+        <script src="script.js?v=3.8"></script>
     </body>
 </html>

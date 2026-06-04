@@ -6,11 +6,23 @@
     --cor-texto: #1a1a1a;
     --cor-destaque: #2c5d63;
     --cor-link: #b45a3d;
+    --cor-link-luminosa: #ffa585; /* Alta legibilidade em fundo escuro (WCAG 4.6:1) */
     --cor-grade: #d1cfc8;
     --azul-blueprint: #1a365d;
     --azul-blueprint-claro: #8fc1e3;
     --espacamento-padrao: 2rem;
 }
+
+/* Acessibilidade de Foco Global (Navegação por Teclado) */
+:focus-visible {
+    outline: 2px dashed var(--cor-link);
+    outline-offset: 4px;
+}
+
+.tela-blueprint :focus-visible {
+    outline: 2px dashed var(--cor-link-luminosa);
+}
+
 
 * {
     margin: 0;
@@ -122,9 +134,53 @@ h3 {
     font-family: monospace;
     font-size: 1.2rem;
     color: #ffffff;
-    border-left: 4px solid var(--cor-link);
+    border-left: 4px solid var(--cor-link-luminosa);
     padding-left: 15px;
 }
+
+.coluna-esquerda .creditos-container {
+    margin-top: 2.5rem;
+}
+
+.coluna-esquerda .creditos-titulo {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--azul-blueprint-claro);
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.coluna-esquerda .lista-creditos {
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    max-width: 90%;
+}
+
+.coluna-esquerda .lista-creditos li {
+    position: relative;
+    padding-left: 12px;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.coluna-esquerda .lista-creditos li:hover {
+    opacity: 1;
+}
+
+.coluna-esquerda .lista-creditos li::before {
+    content: "•";
+    color: var(--cor-link-luminosa);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 
 /* Navegação da Capa */
 .navegacao-apresentacao ul {
@@ -148,18 +204,19 @@ h3 {
 }
 
 .navegacao-apresentacao a:hover {
-    border-color: var(--cor-link);
-    background: rgba(180, 90, 61, 0.1);
+    border-color: var(--cor-link-luminosa);
+    background: rgba(255, 165, 133, 0.1);
     transform: translateX(15px);
-    color: var(--cor-link);
+    color: var(--cor-link-luminosa);
 }
 
 .navegacao-apresentacao .indice {
     font-size: 1.2rem;
     font-family: monospace;
-    color: var(--cor-link);
+    color: var(--cor-link-luminosa);
     margin-right: 2rem;
 }
+
 
 /* ==================================================
    ANIMAÇÕES DE ENTRADA (CASCATA)
@@ -251,16 +308,20 @@ h3 {
 }
 
 .territorio {
-    padding: 6rem var(--espacamento-padrao);
+    padding: 2.5rem var(--espacamento-padrao);
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
+.territorio + .territorio {
+    padding-top: 0.5rem;
+}
+
 .territorio h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.3rem;
+    margin-bottom: 1.25rem;
     position: relative;
     padding-bottom: 10px;
 }
@@ -273,6 +334,19 @@ h3 {
     width: 80px;
     height: 4px;
     background-color: var(--cor-link);
+}
+
+.territorio p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--cor-texto);
+    text-align: justify;
+}
+
+.territorio p:last-of-type {
+    margin-bottom: 2rem;
 }
 
 .grid-conceitos {
@@ -303,7 +377,7 @@ h3 {
     position: relative;
     width: 100%;
     height: 500px;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--cor-grade);
@@ -354,46 +428,205 @@ h3 {
     transform: scale(0.8);
     z-index: 1;
 }
+.cenario.futuro svg {
+    max-width: 90%;
+    max-height: 82%;
+    box-sizing: border-box;
+}
 .ecologia-organica {
     position: relative;
     width: 100%;
     height: 100%;
-}
-.forma {
-    position: absolute;
-    opacity: 0.85;
-}
-.azul-petroleo {
-    background-color: var(--cor-destaque);
-}
-.terracota {
-    background-color: var(--cor-link);
-}
-.creme {
-    background-color: var(--cor-grade);
+    background-image:
+        linear-gradient(rgba(44, 93, 99, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(44, 93, 99, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 2rem;
 }
 
-.redonda {
-    width: 150px;
-    height: 150px;
+.blueprint-zona {
+    position: absolute;
+    border: 1px dashed rgba(44, 93, 99, 0.3);
+    border-radius: 6px;
+    padding: 10px;
+    background: rgba(253, 251, 247, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.blueprint-tag {
+    position: absolute;
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    padding: 1px 5px;
+    border: 1px solid var(--cor-grade);
+    border-radius: 2px;
+    z-index: 10;
+}
+
+/* 1. Zona Cooperativa */
+.zona-cooperativa {
+    width: 170px;
+    height: 170px;
+    top: 15%;
+    left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zona-cooperativa .blueprint-mesa.circular {
+    width: 90px;
+    height: 90px;
+    border: 2px dashed var(--cor-link);
     border-radius: 50%;
-    top: 20%;
-    left: 20%;
+    background: rgba(180, 90, 61, 0.05);
 }
-.capsula {
-    width: 250px;
-    height: 100px;
-    border-radius: 50px;
-    bottom: 30%;
-    right: 20%;
+
+.zona-cooperativa .blueprint-assento {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--azul-blueprint-claro);
+    border: 1px solid var(--azul-blueprint);
 }
-.conectora {
-    width: 200px;
+
+.zona-cooperativa .assento-1 { top: 15px; left: 78px; }
+.zona-cooperativa .assento-2 { top: 55px; right: 15px; }
+.zona-cooperativa .assento-3 { bottom: 20px; right: 30px; }
+.zona-cooperativa .assento-4 { bottom: 20px; left: 30px; }
+.zona-cooperativa .assento-5 { top: 55px; left: 15px; }
+
+.zona-cooperativa .blueprint-tag {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 2. Zona de Pesquisa (Research Lab) */
+.zona-pesquisa {
+    width: 220px;
     height: 120px;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    top: 40%;
-    left: 45%;
+    top: 15%;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
 }
+
+.zona-pesquisa .blueprint-mesa.retangular {
+    width: 180px;
+    height: 35px;
+    border: 2px dashed var(--cor-destaque);
+    border-radius: 4px;
+    background: rgba(44, 93, 99, 0.05);
+    margin-top: 15px;
+}
+
+.zona-pesquisa .blueprint-terminal {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    border: 1px solid var(--azul-blueprint);
+    background: var(--azul-blueprint-claro);
+    border-radius: 2px;
+}
+
+.zona-pesquisa .t-1 { top: 40px; left: 35px; }
+.zona-pesquisa .t-2 { top: 40px; left: 98px; }
+.zona-pesquisa .t-3 { top: 40px; right: 35px; }
+
+.zona-pesquisa .blueprint-tag {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 3. Zona de Convivialidade (Ágora) */
+.zona-agora {
+    width: 230px;
+    height: 150px;
+    bottom: 12%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zona-agora .blueprint-agora-curva {
+    width: 110px;
+    height: 110px;
+    border: 2px dashed var(--cor-link);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+    background: rgba(180, 90, 61, 0.02);
+}
+
+.zona-agora .blueprint-pufe {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    background: var(--azul-blueprint-claro);
+    border: 1px solid var(--cor-destaque);
+}
+
+.zona-agora .p-1 { top: 25px; left: 105px; }
+.zona-agora .p-2 { bottom: 40px; left: 35px; }
+.zona-agora .p-3 { bottom: 35px; right: 55px; }
+
+.zona-agora .blueprint-tag {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 4. Painéis de Exposição / Pública Ação */
+.zona-exposicao {
+    width: 160px;
+    height: 100px;
+    bottom: 15%;
+    right: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.zona-exposicao .blueprint-painel {
+    width: 120px;
+    height: 6px;
+    background: var(--cor-link);
+    border-radius: 3px;
+}
+
+.zona-exposicao .blueprint-tag {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Linhas de Fluxo */
+.blueprint-fluxo-linha {
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    width: 35%;
+    height: 2px;
+    border-top: 1.5px dashed var(--cor-grade);
+    z-index: 0;
+    pointer-events: none;
+    transform: rotate(10deg);
+}
+
 
 #metamorfose-espacial.ativa .obsoleto {
     opacity: 0;
@@ -434,19 +667,47 @@ h3 {
     }
 
     .cabecalho-interno {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .cabecalho-interno .logo-texto a {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.75rem;
     }
 
     .navegacao-reticular {
-        gap: 0.8rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 1.25rem;
+        padding: 0.25rem 0.5rem;
+        justify-content: flex-start;
+        scrollbar-width: none; /* Firefox */
     }
 
+    .navegacao-reticular::-webkit-scrollbar {
+        display: none; /* Safari e Chrome */
+    }
+
+    .navegacao-reticular li {
+        flex: 0 0 auto;
+    }
+
+    .navegacao-reticular a {
+        font-size: 0.8rem;
+        padding-bottom: 0.25rem;
+        white-space: nowrap;
+    }
+
+
     .palco-transicao {
-        height: 350px;
+        height: 350px !important;
     }
     .grade-celular {
         grid-template-columns: repeat(3, 60px);
@@ -455,6 +716,13 @@ h3 {
     .celula {
         width: 60px;
         height: 60px;
+    }
+    .painel-detalhe-capitulo {
+        padding: 1.5rem !important;
+        min-height: auto !important;
+    }
+    .painel-detalhe-capitulo h3 {
+        font-size: 1.4rem !important;
     }
 }
 
@@ -676,7 +944,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
     background: rgba(44, 93, 99, 0.04);
     padding: 2rem;
     border-radius: 8px;
@@ -809,13 +1077,14 @@ h3 {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 120px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cartao-detalhe-conceito.carregando {
-    opacity: 0.5;
-    transform: scale(0.98);
+    opacity: 0;
+    transform: translateY(10px);
 }
+
 
 .cartao-detalhe-conceito h3 {
     font-size: 1.9rem;
@@ -1148,14 +1417,43 @@ h3 {
     justify-content: center;
     position: relative;
     background: rgba(255,255,255,0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.radial-media.pulso-ativo {
+    animation: pulsoFeedback 0.4s ease-out;
 }
 
 .radial-media .numero-grande {
-    font-size: 3rem;
+    font-size: 1.15rem;
     font-family: monospace;
     font-weight: bold;
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.25;
+    padding: 0 5px;
 }
+
+@keyframes pulsoFeedback {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(143, 193, 227, 0.4);
+        border-color: var(--azul-blueprint-claro);
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 12px rgba(143, 193, 227, 0);
+        border-color: var(--cor-link-luminosa);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(143, 193, 227, 0);
+        border-color: var(--azul-blueprint-claro);
+    }
+}
+
 
 .diagnostico-feedback {
     flex-grow: 1;
@@ -1213,75 +1511,64 @@ h3 {
    5. ESTILOS DO GUIA DE LEITURA POR CAPÍTULOS (CHAVES DE LEITURA)
    ================================================== */
 .painel-guia-leitura {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 3rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 3rem;
 }
 
 .seletor-capitulos {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    max-height: 600px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-}
-
-.seletor-capitulos::-webkit-scrollbar {
-    width: 6px;
-}
-.seletor-capitulos::-webkit-scrollbar-thumb {
-    background-color: var(--cor-grade);
-    border-radius: 3px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--cor-grade);
 }
 
 .botao-capitulo {
     background: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--cor-grade);
-    border-left: 5px solid var(--cor-destaque);
-    padding: 1.2rem 1.4rem;
-    text-align: left;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--cor-destaque);
+    border: 1px dashed var(--cor-grade);
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    line-height: 1.4;
+    border-radius: 20px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.5rem 1.1rem;
+    white-space: nowrap;
 }
 
 .botao-capitulo:hover {
     background: #ffffff;
-    border-left-color: var(--cor-link);
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border-color: var(--cor-link);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .botao-capitulo.selecionado {
     background: var(--azul-blueprint);
     color: #ffffff;
-    border-left-color: var(--cor-link);
+    border-style: solid;
     border-color: var(--azul-blueprint);
+    box-shadow: 0 4px 10px rgba(26, 54, 93, 0.15);
 }
 
 .botao-capitulo .numero-cap {
     font-family: monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--cor-link);
+    font-size: 0.85rem;
+    color: var(--cor-destaque);
     font-weight: bold;
 }
 
 .botao-capitulo.selecionado .numero-cap {
-    color: var(--azul-blueprint-claro);
+    color: #ffffff;
 }
+
 
 .painel-detalhe-capitulo {
     background: #ffffff;
@@ -1291,13 +1578,14 @@ h3 {
     padding: 3rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     min-height: 480px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .painel-detalhe-capitulo.carregando {
-    opacity: 0.5;
-    transform: scale(0.98);
+    opacity: 0;
+    transform: translateY(10px);
 }
+
 
 .painel-detalhe-capitulo h3 {
     font-size: 1.9rem;
@@ -1392,24 +1680,7 @@ h3 {
 
 @media (max-width: 900px) {
     .painel-guia-leitura {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .seletor-capitulos {
-        max-height: 200px;
-        flex-direction: row;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding-bottom: 0.8rem;
-        white-space: nowrap;
-    }
-    
-    .botao-capitulo {
-        display: inline-flex;
-        flex-shrink: 0;
-        min-width: 250px;
-        white-space: normal;
+        gap: 1.5rem;
     }
 }
 
