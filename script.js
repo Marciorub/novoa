@@ -655,7 +655,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Este capítulo convoca a uma revolução copernicana na formação docente. Para legitimar o conhecimento contingente, coletivo e público, Nóvoa advoga a urgência da escrita pedagógica. Escrever e publicar é um ato político de autoria, que ele nomeia como 'pública ação'. Sem a documentação reflexiva e a escrita sistemática de suas práticas, o professor permanece silenciado pelas burocracias escolares e subordinado às receitas impostas por especialistas corporativos externos.",
         paginas: "Páginas 57, 58 e 71-72",
         provocacao:
-          "Em que medida o produtivismo exigido pela pós-graduação acadêmica e a regulação ministerial baseada em competências instrumentais (como as impostas pela BNCC-Formação no Brasil) boicotam a criação de comunidades coletivas de escrita e autoria pedagógica no interior das escolas públicas?",
+          "Em que medida o produtivismo exigido pela pós-graduação acadêmica e a regulação ministerial baseada em competências instrumentais (como as impostas pela BNC-Formação no Brasil) boicotam a criação de comunidades coletivas de escrita e autoria pedagógica no interior das escolas públicas?",
         autores:
           "Lee Shulman, Gilles Ferry, Richard Sennett, Ken Zeichner, Donald Schön",
       },
